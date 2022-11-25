@@ -23,7 +23,7 @@ const CardWithPictureTitleButtons: React.FC<
 > = ({ collection, width, height, isContentCenter = false }) => {
   return (
     <div className="relative mx-0.5">
-      <div className={cx(width, height)}>
+      <div className={cx('relative', width, height)}>
         <Image
           src={collection.image}
           alt={collection.title}

@@ -26,7 +26,7 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
       <div className="relative mx-0.5 cursor-pointer overflow-hidden">
         <div
           className={cx(
-            'transition-transform duration-200 ease-in-out hover:scale-105',
+            'relative transition-transform duration-200 ease-in-out hover:scale-105',
             width,
             height
           )}
