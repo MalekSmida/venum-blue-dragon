@@ -1,2 +1,2 @@
-export { default as SectionWithTitle } from './SectionWithTitle';
+export { default as Section } from './Section';
 export { default as Slider } from './Slider';

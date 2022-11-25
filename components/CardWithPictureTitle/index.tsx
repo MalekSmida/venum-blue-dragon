@@ -7,7 +7,7 @@ import cx from 'classnames';
 import { Collection } from '../../types';
 import Title from '../Title';
 
-interface PropsCardWithPictureTitle {
+export interface PropsCardWithPictureTitle {
   collection: Collection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
