@@ -6,12 +6,12 @@ import { dataProducts } from './mocks';
 function Products() {
   return (
     <Section title="Des produits adaptés à vos besoins">
-      <div className="flex">
+      <div className="flex w-full flex-col sm:flex-row">
         {dataProducts.map((product, idx) => (
           <CardWithPictureTitle
             key={idx}
             collection={product}
-            width="w-1/3"
+            width="w-full sm:w-1/3"
             height="h-750"
           />
         ))}
