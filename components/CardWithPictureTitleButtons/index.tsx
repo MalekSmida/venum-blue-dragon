@@ -6,7 +6,7 @@ import cx from 'classnames';
 import { ICollection } from '../../types';
 import Button from '../Button';
 import Title from '../Title';
-import Description from '../Description';
+import { Description } from '..';
 
 interface PropsCardWithPictureTitleButtons {
   collection: ICollection;
