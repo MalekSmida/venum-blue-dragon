@@ -1,5 +1,5 @@
 // local files
-import { Section, Slider } from '../../layout';
+import { Section } from '../../layout';
 import { CardWithPictureTitleButtons, MenuNav } from '../../components';
 import { dataCustom, dataMenuCostum } from './mocks';
 

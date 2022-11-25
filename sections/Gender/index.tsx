@@ -13,6 +13,7 @@ function Gender() {
             collection={gender}
             width="w-895"
             height="h-800"
+            isContentCenter
           />
         ))}
       </div>

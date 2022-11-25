@@ -4,11 +4,11 @@ import Image from 'next/image';
 import cx from 'classnames';
 
 // local files
-import { Collection } from '../../types';
+import { ICollection } from '../../types';
 import Title from '../Title';
 
 export interface PropsCardWithPictureTitle {
-  collection: Collection;
+  collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
 }
