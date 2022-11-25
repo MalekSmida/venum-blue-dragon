@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 // typing
-interface PropsButton {
+export interface PropsButton {
   title: string;
   link: string;
 }

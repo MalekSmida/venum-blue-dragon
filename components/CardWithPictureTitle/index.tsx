@@ -24,12 +24,13 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
   return (
     <Link href={`/collection/${collection.link}`}>
       <div className="relative mx-0.5 cursor-pointer">
-        <div className={cx('relative object-cover', width, height)}>
+        <div className={cx(width, height)}>
           <Image
             src={collection.image}
             alt={collection.title}
             layout="fill"
             objectFit="cover"
+            objectPosition="center"
           />
         </div>
 
