@@ -1,6 +1,6 @@
-import { ICollection, IButtonMenu } from '../../types';
+import { ICollection, IButtonLink } from '../../types';
 
-export const dataMenuCategory: Array<IButtonMenu> = [
+export const dataMenuCategory: Array<IButtonLink> = [
   {
     title: 'Hommes',
     link: '',

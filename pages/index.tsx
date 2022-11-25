@@ -2,7 +2,14 @@
 import Head from 'next/head';
 
 // local files
-import { Collections, Gender, Media, Categories, Products } from '../sections';
+import {
+  Collections,
+  Gender,
+  Media,
+  Categories,
+  Products,
+  Custom,
+} from '../sections';
 
 export default function Home() {
   return (
@@ -19,6 +26,7 @@ export default function Home() {
         <Gender />
         <Categories />
         <Products />
+        <Custom />
       </main>
     </div>
   );

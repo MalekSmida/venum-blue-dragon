@@ -2,15 +2,15 @@
 import cx from 'classnames';
 
 // local files
-import { IButtonMenu } from '../../types';
+import { IButtonLink } from '../../types';
 
 // typing
 interface PropsMenuNav {
-  listMenu: IButtonMenu[];
+  listMenu: IButtonLink[];
   handleClick: () => void;
 }
 interface PropsButtonLink {
-  buttonMenu: IButtonMenu;
+  buttonMenu: IButtonLink;
   isSelected: boolean;
 }
 

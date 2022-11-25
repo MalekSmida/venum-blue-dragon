@@ -1,6 +1,6 @@
-import { IGender } from '../../types';
+import { ICollection } from '../../types';
 
-export const dataGender: Array<IGender> = [
+export const dataGender: Array<ICollection> = [
   {
     _id: '0',
     image: 'https://euro.venum.com/media/wysiwyg/PUSH-RAZOR-HOMME.jpg',
