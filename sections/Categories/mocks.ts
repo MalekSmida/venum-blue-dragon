@@ -44,28 +44,4 @@ export const dataCategory: Array<ICollection> = [
     title: 'Ufc fight night 2.0',
     link: '',
   },
-  {
-    _id: '4',
-    image: 'https://euro.venum.com/media/wysiwyg/PUSH-RAZOR-HOMME.jpg',
-    title: 'Ufc fight night 2.0',
-    link: '',
-  },
-  {
-    _id: '5',
-    image: 'https://euro.venum.com/media/wysiwyg/PUSH-RAZOR-HOMME.jpg',
-    title: 'Ufc fight night 2.0',
-    link: '',
-  },
-  {
-    _id: '6',
-    image: 'https://euro.venum.com/media/wysiwyg/PUSH-RAZOR-HOMME.jpg',
-    title: 'Ufc fight night 2.0',
-    link: '',
-  },
-  {
-    _id: '7',
-    image: 'https://euro.venum.com/media/wysiwyg/PUSH-RAZOR-HOMME.jpg',
-    title: 'Ufc fight night 2.0',
-    link: '',
-  },
 ];

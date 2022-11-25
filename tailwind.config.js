@@ -10,11 +10,13 @@ module.exports = {
     extend: {
       width: {
         445: '27.813rem', // eq to 445px
+        595: '37.188rem',
         895: '55.938rem',
       },
       height: {
         450: '25rem',
         665: '41.563rem',
+        750: '46.875rem',
         800: '50rem',
       },
       maxWidth: {
