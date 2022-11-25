@@ -35,15 +35,17 @@ const CardWithPictureTitleButtons: React.FC<
 
       <div
         className={cx(
-          'absolute bottom-0 left-0 flex w-full flex-col items-center p-10',
+          'absolute bottom-0 left-0 flex w-full flex-col justify-center p-10',
 
-          { 'justify-center': isContentCenter }
+          { 'items-center': isContentCenter }
         )}
       >
         {collection.title && <Title>{collection.title}</Title>}
 
         {collection.description && (
-          <Description>{collection.description}</Description>
+          <Description className="max-w-md py-5">
+            {collection.description}
+          </Description>
         )}
 
         {collection.listButtons && (
