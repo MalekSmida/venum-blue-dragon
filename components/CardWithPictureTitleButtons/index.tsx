@@ -22,8 +22,8 @@ const CardWithPictureTitleButtons: React.FC<
   PropsCardWithPictureTitleButtons
 > = ({ collection, width, height, isContentCenter = false }) => {
   return (
-    <div className="relative mx-0.5">
-      <div className={cx('relative', width, height)}>
+    <div className={cx('relative mx-0.5', width, height)}>
+      <div className="relative h-full w-full">
         <Image
           src={collection.image}
           alt={collection.title}

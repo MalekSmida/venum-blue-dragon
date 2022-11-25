@@ -7,7 +7,7 @@ function Categories() {
   return (
     <Section title="Découvrir nos catégories">
       <MenuNav listMenu={dataMenuCategory} handleClick={() => {}} />
-      <Slider itemList={dataCategory} cardWidth="w-445" cardHeight="h-450" />
+      <Slider itemList={dataCategory} cardWidth="w-1/4" cardHeight="h-450" />
     </Section>
   );
 }

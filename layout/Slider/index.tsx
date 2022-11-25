@@ -11,7 +11,7 @@ interface PropsSlider {
 
 const Slider: React.FC<PropsSlider> = ({ itemList, cardWidth, cardHeight }) => {
   return (
-    <div className="flex overflow-x-hidden overflow-y-hidden">
+    <div className="flex w-full overflow-x-hidden overflow-y-hidden">
       {itemList.map((collection, idx) => (
         <CardWithPictureTitle
           key={idx}

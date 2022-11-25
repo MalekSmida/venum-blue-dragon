@@ -9,8 +9,8 @@ function Categories() {
       <MenuNav listMenu={dataMenuCostum} handleClick={() => {}} />
       <CardWithPictureTitleButtons
         collection={dataCustom}
-        height="h-700"
         width="w-full"
+        height="h-700"
       />
     </Section>
   );

@@ -11,7 +11,7 @@ function Products() {
           <CardWithPictureTitle
             key={idx}
             collection={product}
-            width="w-595"
+            width="w-1/3"
             height="h-750"
           />
         ))}

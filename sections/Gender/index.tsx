@@ -6,12 +6,12 @@ import { dataGender } from './mocks';
 function Gender() {
   return (
     <Section>
-      <div className="flex">
+      <div className="flex w-full">
         {dataGender.map((gender, idx) => (
           <CardWithPictureTitleButtons
             key={idx}
             collection={gender}
-            width="w-895"
+            width="w-1/2"
             height="h-800"
             isContentCenter
           />

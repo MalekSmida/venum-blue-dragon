@@ -23,14 +23,14 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
 }) => {
   return (
     <Link href={`/collection/${collection.link}`}>
-      <div className="relative mx-0.5 cursor-pointer overflow-hidden">
-        <div
-          className={cx(
-            'relative transition-transform duration-200 ease-in-out hover:scale-105',
-            width,
-            height
-          )}
-        >
+      <div
+        className={cx(
+          'relative mx-0.5 cursor-pointer overflow-hidden',
+          width,
+          height
+        )}
+      >
+        <div className="relative h-full w-full transition-transform duration-200 ease-in-out hover:scale-105">
           <Image
             src={collection.image}
             alt={collection.title}
