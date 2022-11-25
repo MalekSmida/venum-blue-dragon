@@ -1,13 +1,13 @@
 // local files
 import { Section, Slider } from '../../layout';
-import { data } from './mocks';
+import { dataCollection } from './mocks';
 
-function Collection() {
+function Collections() {
   return (
     <Section title="Découvrir nos collections">
-      <Slider itemList={data} />
+      <Slider itemList={dataCollection} cardWidth="w-445" cardHeight="h-665" />
     </Section>
   );
 }
 
-export default Collection;
+export default Collections;

@@ -13,11 +13,15 @@ module.exports = {
         895: '55.938rem',
       },
       height: {
+        450: '25rem',
         665: '41.563rem',
         800: '50rem',
       },
       maxWidth: {
         1920: '1920px',
+      },
+      colors: {
+        'dark-custom': 'var(--dark-custom)',
       },
     },
   },

@@ -5,3 +5,7 @@
 html {
   font-family: alternate-gothic-atf;
 }
+
+:root {
+  --dark-custom: #070707;
+}

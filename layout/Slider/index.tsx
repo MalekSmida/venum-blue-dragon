@@ -1,21 +1,23 @@
 // local files
 import { CardWithPictureTitle } from '../../components';
-import { Collection } from '../../types';
+import { ICollection } from '../../types';
 
 // typing
 interface PropsSlider {
-  itemList: Collection[];
+  itemList: ICollection[];
+  cardWidth: string;
+  cardHeight: string;
 }
 
-const Slider: React.FC<PropsSlider> = ({ itemList }) => {
+const Slider: React.FC<PropsSlider> = ({ itemList, cardWidth, cardHeight }) => {
   return (
     <div className="flex overflow-x-hidden overflow-y-hidden">
       {itemList.map((collection, idx) => (
         <CardWithPictureTitle
           key={idx}
           collection={collection}
-          width="w-445"
-          height="h-665"
+          width={cardWidth}
+          height={cardHeight}
         />
       ))}
     </div>

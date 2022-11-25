@@ -1,13 +1,13 @@
 // local files
 import { CardWithPictureTitleButtons } from '../../components';
 import { Section } from '../../layout';
-import { data } from './mocks';
+import { dataGender } from './mocks';
 
 function Gender() {
   return (
     <Section>
       <div className="flex">
-        {data.map((gender, idx) => (
+        {dataGender.map((gender, idx) => (
           <CardWithPictureTitleButtons
             key={idx}
             collection={gender}
