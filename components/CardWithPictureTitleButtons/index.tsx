@@ -20,7 +20,7 @@ const CardWithPictureTitleButtons: React.FC<
   PropsCardWithPictureTitleButtons
 > = ({ collection, width, height }) => {
   return (
-    <div className="relative mx-0.5 cursor-pointer">
+    <div className="relative mx-0.5">
       <div className={cx(width, height)}>
         <Image
           src={collection.image}
