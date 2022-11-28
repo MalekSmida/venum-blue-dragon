@@ -1,12 +1,14 @@
 // node modules
 import Image from 'next/image';
 import cx from 'classnames';
+import { useSelector } from 'react-redux';
 
 // local files
 import { ICollection } from '../../types';
 import Button from '../Button';
 import Title from '../Title';
 import { Description } from '..';
+import { selectApp } from '../../redux/slices/appSlice';
 
 interface PropsCardWithPictureTitleButtons {
   collection: ICollection;
@@ -21,6 +23,9 @@ interface PropsCardWithPictureTitleButtons {
 const CardWithPictureTitleButtons: React.FC<
   PropsCardWithPictureTitleButtons
 > = ({ collection, width, height, isContentCenter = false }) => {
+  // redux
+  const { isMobileScreenSize } = useSelector(selectApp);
+
   return (
     <div className={cx('relative mx-0.5', width, height)}>
       <div className="relative h-full w-full">
@@ -49,7 +54,11 @@ const CardWithPictureTitleButtons: React.FC<
         )}
 
         {collection.listButtons && (
-          <div className="flex flex-wrap items-center justify-center pt-6">
+          <div
+            className={cx('flex flex-wrap items-center pt-6', {
+              'justify-center': isMobileScreenSize,
+            })}
+          >
             {collection.listButtons.map((propsButton, idx) => (
               <Button key={idx} {...propsButton} />
             ))}
