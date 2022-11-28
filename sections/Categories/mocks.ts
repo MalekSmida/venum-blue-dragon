@@ -56,4 +56,40 @@ export const dataCategory: Array<ICollection> = [
     title: 'Ufc fight night 2.0',
     link: '',
   },
+  {
+    _id: '4',
+    imageDesk:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    imageMobile:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    title: 'Ufc fight night 2.0',
+    link: '',
+  },
+  {
+    _id: '5',
+    imageDesk:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    imageMobile:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    title: 'Ufc fight night 2.0',
+    link: '',
+  },
+  {
+    _id: '6',
+    imageDesk:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    imageMobile:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    title: 'Ufc fight night 2.0',
+    link: '',
+  },
+  {
+    _id: '7',
+    imageDesk:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    imageMobile:
+      'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
+    title: 'Ufc fight night 2.0',
+    link: '',
+  },
 ];
