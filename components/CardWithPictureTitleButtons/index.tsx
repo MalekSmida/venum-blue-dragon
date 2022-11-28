@@ -30,7 +30,9 @@ const CardWithPictureTitleButtons: React.FC<
     <div className={cx('relative mx-0.5', width, height)}>
       <div className="relative h-full w-full">
         <Image
-          src={collection.image}
+          src={
+            isMobileScreenSize ? collection.imageMobile : collection.imageDesk
+          }
           alt={collection.title}
           layout="fill"
           objectFit="cover"

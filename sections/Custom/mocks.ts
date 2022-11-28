@@ -17,7 +17,9 @@ export const dataMenuCostum: Array<IButtonLink> = [
 
 export const dataCustom: ICollection = {
   _id: '0',
-  image:
+  imageDesk:
+    'https://euro.venum.com/media/venum-ufc/VENUM_PAGE_HISTOIRE_UFC_MOBILE_02_08.jpg',
+  imageMobile:
     'https://euro.venum.com/media/venum-ufc/VENUM_PAGE_HISTOIRE_UFC_MOBILE_02_08.jpg',
   title: 'Ufc fight night 2.0',
   description:

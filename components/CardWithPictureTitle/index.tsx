@@ -37,7 +37,9 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
       >
         <div className="relative h-full w-full transition-transform duration-200 ease-in-out hover:scale-105">
           <Image
-            src={collection.image}
+            src={
+              isMobileScreenSize ? collection.imageMobile : collection.imageDesk
+            }
             alt={collection.title}
             layout="fill"
             objectFit="cover"

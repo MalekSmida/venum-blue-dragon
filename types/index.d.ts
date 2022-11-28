@@ -1,6 +1,7 @@
 export interface ICollection {
   _id: string;
-  image: string;
+  imageDesk: string;
+  imageMobile: string;
   title?: string;
   link?: string;
   tag?: Category;
