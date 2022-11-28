@@ -1,7 +1,5 @@
 // node modules
-import { useEffect } from 'react';
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
 
 // local files
 import {
@@ -12,11 +10,11 @@ import {
   Products,
   Custom,
 } from '../sections';
-import { selectApp } from '../redux/slices/appSlice';
+import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
 
 export default function Home() {
   // hooks
-  const { isMobileScreenSize } = useSelector(selectApp);
+  useDetectMobileScreenSize();
 
   return (
     <div>
