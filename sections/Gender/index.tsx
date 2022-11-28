@@ -6,7 +6,7 @@ import { dataGender } from './mocks';
 function Gender() {
   return (
     <Section>
-      <div className="flex w-full flex-col lg:flex-row">
+      <div className="flex w-full flex-row">
         {dataGender.map((gender, idx) => (
           <CardWithPictureTitleButtons
             key={idx}

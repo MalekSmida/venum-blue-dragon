@@ -22,7 +22,7 @@ const MenuNav: React.FC<PropsMenuNav> = ({ listMenu, handleClick }) => {
     <li>
       <span
         className={cx(
-          'relative cursor-pointer select-none before:absolute before:-bottom-1 before:h-0.5 before:w-full before:bg-dark-custom',
+          'relative mx-7 cursor-pointer select-none before:absolute before:-bottom-1 before:h-0.5 before:w-full before:bg-dark-custom',
           {
             'text-gray-400 transition-colors duration-300 ease-in-out before:origin-left before:scale-x-0 before:transition hover:text-dark-custom hover:before:scale-100':
               !isSelected,
@@ -38,7 +38,7 @@ const MenuNav: React.FC<PropsMenuNav> = ({ listMenu, handleClick }) => {
   );
 
   return (
-    <ul className="mb-5 flex items-center justify-center gap-20 text-3xl">
+    <ul className="mb-5 flex items-center justify-center text-3xl">
       {listMenu.map((buttonMenu, idx) => (
         <ButtonLink key={idx} buttonMenu={buttonMenu} isSelected={idx === 0} />
       ))}

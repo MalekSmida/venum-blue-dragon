@@ -49,7 +49,7 @@ const CardWithPictureTitleButtons: React.FC<
         )}
 
         {collection.listButtons && (
-          <div className="pt-6">
+          <div className="flex flex-wrap items-center justify-center pt-6">
             {collection.listButtons.map((propsButton, idx) => (
               <Button key={idx} {...propsButton} />
             ))}

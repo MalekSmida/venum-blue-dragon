@@ -1,5 +1,6 @@
 // node modules
 import Head from 'next/head';
+import { useSelector } from 'react-redux';
 
 // local files
 import {
@@ -11,8 +12,12 @@ import {
   Custom,
 } from '../sections';
 import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
+import { selectApp } from '../redux/slices/appSlice';
 
 export default function Home() {
+  // redux
+  const { isMobileScreenSize } = useSelector(selectApp);
+
   // hooks
   useDetectMobileScreenSize();
 
@@ -26,9 +31,10 @@ export default function Home() {
 
       <main>
         <Media />
+        {isMobileScreenSize && <Categories />}
         <Collections />
         <Gender />
-        <Categories />
+        {!isMobileScreenSize && <Categories />}
         <Products />
         <Custom />
       </main>

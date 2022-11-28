@@ -2,10 +2,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import cx from 'classnames';
+import { useSelector } from 'react-redux';
 
 // local files
 import { ICollection } from '../../types';
 import Title from '../Title';
+import { selectApp } from '../../redux/slices/appSlice';
 
 export interface PropsCardWithPictureTitle {
   collection: ICollection;
@@ -21,6 +23,9 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
   width,
   height,
 }) => {
+  // redux
+  const { isMobileScreenSize } = useSelector(selectApp);
+
   return (
     <Link href={`/collection/${collection.link}`}>
       <div
@@ -40,7 +45,13 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
           />
         </div>
 
-        <Title className="absolute bottom-5 left-5">{collection.title}</Title>
+        <Title
+          className={cx('absolute bottom-0 left-0 w-full p-5', {
+            'text-center': isMobileScreenSize,
+          })}
+        >
+          {collection.title}
+        </Title>
       </div>
     </Link>
   );

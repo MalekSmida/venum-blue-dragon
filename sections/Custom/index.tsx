@@ -5,7 +5,7 @@ import { dataCustom, dataMenuCostum } from './mocks';
 
 function Categories() {
   return (
-    <Section title="Découvrir nos catégories">
+    <Section title="Découvrir l’expérience Venum Custom">
       <MenuNav listMenu={dataMenuCostum} handleClick={() => {}} />
       <CardWithPictureTitleButtons
         collection={dataCustom}
