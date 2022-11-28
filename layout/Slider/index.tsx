@@ -13,17 +13,14 @@ import { ICollection } from '../../types';
 // typing
 interface PropsSlider {
   itemList: ICollection[];
-  cardWidth: string;
   cardHeight: string;
 }
 
-const Slider: React.FC<PropsSlider> = ({ itemList, cardWidth, cardHeight }) => {
+const Slider: React.FC<PropsSlider> = ({ itemList, cardHeight }) => {
   return (
     <Swiper
       spaceBetween={0}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       navigation={true}
       pagination={{
         clickable: true,
