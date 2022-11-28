@@ -46,7 +46,7 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
         </div>
 
         <Title
-          className={cx('absolute bottom-0 left-0 w-full p-5', {
+          className={cx('absolute bottom-0 left-0 w-full px-5 py-4', {
             'text-center': isMobileScreenSize,
           })}
         >

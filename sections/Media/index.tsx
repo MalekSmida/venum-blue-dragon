@@ -13,7 +13,7 @@ function Media() {
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <div className="relative">
+    <div className="relative mb-11">
       <Video
         sourceDesk="https://a.storyblok.com/f/117261/x/a0ff98bb58/giants-3-0-v12.mp4"
         sourceMobile="https://a.storyblok.com/f/117261/x/a0ff98bb58/giants-3-0-v12.mp4"

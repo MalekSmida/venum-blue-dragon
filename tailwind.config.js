@@ -30,6 +30,34 @@ module.exports = {
       colors: {
         'c-dark': 'var(--c-dark)',
       },
+      fontSize: {
+        xl: [
+          '1.375rem', // 22px on a root font-size of 16px
+          {
+            lineHeight: '1.75rem',
+          },
+        ],
+        '2xl': [
+          '1.5rem',
+          {
+            lineHeight: '2rem',
+          },
+        ],
+        '4xl': [
+          '2.188rem', // 35px
+          {
+            lineHeight: '2.25rem',
+            fontWeight: '400',
+          },
+        ],
+        '5xl': [
+          '2.813rem', // 45px
+          {
+            lineHeight: '2.5rem',
+            fontWeight: '600',
+          },
+        ],
+      },
     },
   },
   plugins: [],
