@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      skew: {
+        20: '20deg',
+      },
       height: {
         450: '25rem',
         665: '41.563rem',
