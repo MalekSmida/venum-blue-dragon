@@ -4,17 +4,11 @@
 
 html {
   font-family: alternate-gothic-atf;
-  font-size: 8px;
+  font-size: 9px;
 }
 
 :root {
   --dark-custom: #070707;
-}
-
-@media only screen and (min-width: 640px) {
-  html {
-    font-size: 9px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
