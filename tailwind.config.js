@@ -8,21 +8,27 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // adapt design size into responsive units
+      // "c-" stands for custom
       skew: {
-        20: '20deg',
+        'c-20': '20deg',
+      },
+      padding: {
+        'c-72': '4.5rem',
       },
       height: {
-        450: '25rem',
-        665: '41.563rem',
-        700: '43.75rem',
-        750: '46.875rem',
-        800: '50rem',
+        'c-53': '3.313rem',
+        'c-450': '25rem',
+        'c-665': '41.563rem',
+        'c-700': '43.75rem',
+        'c-750': '46.875rem',
+        'c-800': '50rem',
       },
       maxWidth: {
-        1920: '1920px',
+        'c-1920': '1920px',
       },
       colors: {
-        'dark-custom': 'var(--dark-custom)',
+        'c-dark': 'var(--c-dark)',
       },
     },
   },

@@ -12,7 +12,7 @@ function Gender() {
             key={idx}
             collection={gender}
             width="w-full lg:w-1/2"
-            height="h-800"
+            height="h-c-800"
             isContentCenter
           />
         ))}

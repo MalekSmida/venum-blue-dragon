@@ -16,10 +16,10 @@ const Section: React.FC<PropsSection> = ({ title, children }) => {
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <div className="mx-auto w-full max-w-1920 p-7">
+    <div className="mx-auto w-full max-w-c-1920 p-7">
       {title && (
         <h1
-          className={cx('pt-12 pb-7 text-5xl font-semibold text-dark-custom', {
+          className={cx('pt-12 pb-7 text-5xl font-semibold text-c-dark', {
             'text-center': isMobileScreenSize,
           })}
         >

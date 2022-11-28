@@ -10,7 +10,7 @@ function Categories() {
       <CardWithPictureTitleButtons
         collection={dataCustom}
         width="w-full"
-        height="h-700"
+        height="h-c-700"
       />
     </Section>
   );

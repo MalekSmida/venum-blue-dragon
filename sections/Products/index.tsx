@@ -12,7 +12,7 @@ function Products() {
             key={idx}
             collection={product}
             width="w-full sm:w-1/3"
-            height="h-750"
+            height="h-c-750"
           />
         ))}
       </div>
