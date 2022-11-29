@@ -4,8 +4,6 @@ import cx from 'classnames';
 
 // local files
 import { selectApp } from '../../redux/slices/appSlice';
-
-// local files
 import { Video, Button, Title } from '../../components';
 
 function Media() {

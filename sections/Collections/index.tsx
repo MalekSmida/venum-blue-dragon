@@ -1,4 +1,5 @@
 // local files
+import { CardWithPictureTitle } from '../../components';
 import { Section, Slider } from '../../layout';
 import { dataCollection } from './mocks';
 
@@ -6,7 +7,6 @@ function Collections() {
   return (
     <Section title="Découvrir nos collections">
       <Slider
-        itemList={dataCollection}
         breakpoints={{
           480: {
             slidesPerView: 2,
@@ -21,8 +21,16 @@ function Collections() {
             spaceBetween: 3,
           },
         }}
-        cardHeight="h-c-665"
-      />
+      >
+        {dataCollection.map((collection, idx) => (
+          <CardWithPictureTitle
+            key={idx}
+            collection={collection}
+            width="w-full"
+            height="h-c-665"
+          />
+        ))}
+      </Slider>
     </Section>
   );
 }
