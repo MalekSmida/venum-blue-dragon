@@ -10,6 +10,10 @@ function Categories() {
       <Slider
         itemList={dataCategory}
         breakpoints={{
+          1: {
+            slidesPerView: 3,
+            spaceBetween: 3,
+          },
           480: {
             slidesPerView: 2,
             spaceBetween: 3,
@@ -24,6 +28,7 @@ function Categories() {
           },
         }}
         cardHeight="h-c-450"
+        hidePagination
       />
     </Section>
   );

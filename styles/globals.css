@@ -9,11 +9,33 @@ html {
 
 :root {
   --c-dark: #070707;
+
+  --swiper-theme-color: #070707 !important;
+}
+
+/* override slider navigation buttons */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 2rem !important;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  height: 3px !important;
+  width: 40px !important;
+  border-radius: 25px !important;
 }
 
 @media only screen and (min-width: 768px) {
   html {
     font-size: 10px;
+  }
+  .swiper-pagination-bullet {
+    height: 4px !important;
+    width: 6.125rem !important; /* 98px */
   }
 }
 
