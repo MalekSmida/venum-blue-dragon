@@ -1,10 +1,11 @@
 // node modules
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 // local files
 import { CardWithPictureTitle } from '../../components';
@@ -20,12 +21,15 @@ const Slider: React.FC<PropsSlider> = ({ itemList, cardHeight }) => {
   return (
     <Swiper
       spaceBetween={0}
+      autoplay={{
+        delay: 5000,
+      }}
       slidesPerView={1}
       navigation={true}
       pagination={{
         clickable: true,
       }}
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay]}
       breakpoints={{
         480: {
           slidesPerView: 2,
