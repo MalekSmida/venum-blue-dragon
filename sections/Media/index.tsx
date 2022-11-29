@@ -20,13 +20,13 @@ function Media() {
       />
       <div
         className={cx(
-          'absolute bottom-0 left-0 flex w-full flex-col justify-center px-c-72 py-24',
+          'absolute bottom-0 left-0 flex w-full flex-col justify-center px-c-72 py-16 md:py-24',
           {
             'items-center': isMobileScreenSize,
           }
         )}
       >
-        <Title className="pb-11 pl-3">Les gants GIANT 3.0</Title>
+        <Title className="pb-5 pl-3 md:pb-11">Les gants GIANT 3.0</Title>
         <Button title="Découvrir" link="/home" />
       </div>
     </div>

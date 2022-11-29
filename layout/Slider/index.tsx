@@ -68,7 +68,7 @@ const Slider: React.FC<PropsSlider> = ({
       </Swiper>
       <div
         ref={prevElRef}
-        className="absolute -left-8 top-1/2 z-20 cursor-pointer"
+        className="absolute -left-9 top-1/2 z-20 hidden cursor-pointer md:block"
       >
         <svg width="24" height="24" fillRule="evenodd" clipRule="evenodd">
           <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z" />
@@ -76,7 +76,7 @@ const Slider: React.FC<PropsSlider> = ({
       </div>
       <div
         ref={nextElRef}
-        className="absolute -right-8 top-1/2 z-20 cursor-pointer"
+        className="absolute -right-9 top-1/2 z-20 hidden cursor-pointer md:block"
       >
         <svg width="24" height="24" fillRule="evenodd" clipRule="evenodd">
           <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" />
