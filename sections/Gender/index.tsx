@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import cx from 'classnames';
 
 // local files
-import { CardWithPictureTitleButtons } from '../../components';
+import { CardPictureTitleButtons } from '../../components';
 import { Section, Slider } from '../../layout';
 import { dataGender } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
@@ -18,7 +18,7 @@ function Gender() {
         {isMobileScreenSize ? (
           <Slider hidePagination>
             {dataGender.map((gender, idx) => (
-              <CardWithPictureTitleButtons
+              <CardPictureTitleButtons
                 key={idx}
                 collection={gender}
                 width="w-full"
@@ -29,7 +29,7 @@ function Gender() {
           </Slider>
         ) : (
           dataGender.map((gender, idx) => (
-            <CardWithPictureTitleButtons
+            <CardPictureTitleButtons
               key={idx}
               collection={gender}
               width="w-full lg:w-1/2"

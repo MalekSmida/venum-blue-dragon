@@ -10,7 +10,7 @@ import Title from '../Title';
 import { Description } from '..';
 import { selectApp } from '../../redux/slices/appSlice';
 
-interface PropsCardWithPictureTitleButtons {
+interface PropsCardPictureTitleButtons {
   collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
@@ -20,9 +20,12 @@ interface PropsCardWithPictureTitleButtons {
 /**
  * Post card component that is shown in home page
  */
-const CardWithPictureTitleButtons: React.FC<
-  PropsCardWithPictureTitleButtons
-> = ({ collection, width, height, isContentCenter = false }) => {
+const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
+  collection,
+  width,
+  height,
+  isContentCenter = false,
+}) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
@@ -71,4 +74,4 @@ const CardWithPictureTitleButtons: React.FC<
   );
 };
 
-export default CardWithPictureTitleButtons;
+export default CardPictureTitleButtons;

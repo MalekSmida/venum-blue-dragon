@@ -1,5 +1,5 @@
 // local files
-import { CardWithPictureTitle } from '../../components';
+import { CardPictureTitle } from '../../components';
 import { Section, Slider } from '../../layout';
 import { dataCollection } from './mocks';
 
@@ -23,7 +23,7 @@ function Collections() {
         }}
       >
         {dataCollection.map((collection, idx) => (
-          <CardWithPictureTitle
+          <CardPictureTitle
             key={idx}
             collection={collection}
             width="w-full"

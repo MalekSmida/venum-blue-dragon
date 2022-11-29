@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 // local files
 import { Section, Slider } from '../../layout';
-import { CardWithPictureTitle, MenuNav } from '../../components';
+import { CardPictureTitle, MenuNav, CardTitleBottom } from '../../components';
 import { dataCategory, dataMenuCategory } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
 
@@ -17,10 +17,6 @@ function Categories() {
       <Slider
         breakpoints={{
           1: {
-            slidesPerView: 3,
-            spaceBetween: 3,
-          },
-          480: {
             slidesPerView: 4,
             spaceBetween: 3,
           },
@@ -35,14 +31,23 @@ function Categories() {
         }}
         hidePagination={isMobileScreenSize}
       >
-        {dataCategory.map((collection, idx) => (
-          <CardWithPictureTitle
-            key={idx}
-            collection={collection}
-            width="w-full"
-            height="h-c-450"
-          />
-        ))}
+        {isMobileScreenSize
+          ? dataCategory.map((collection, idx) => (
+              <CardTitleBottom
+                key={idx}
+                collection={collection}
+                width="w-full"
+                height="h-c-91"
+              />
+            ))
+          : dataCategory.map((collection, idx) => (
+              <CardPictureTitle
+                key={idx}
+                collection={collection}
+                width="w-full"
+                height="h-c-450"
+              />
+            ))}
       </Slider>
     </Section>
   );

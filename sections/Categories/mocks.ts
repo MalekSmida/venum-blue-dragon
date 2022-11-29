@@ -25,7 +25,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'T-shirts & Débardeurs',
     link: '',
   },
   {
@@ -33,7 +33,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'Sweats & Vestes',
     link: '',
   },
   {
@@ -41,7 +41,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'Pantalons',
     link: '',
   },
   {
@@ -49,7 +49,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'Shorts',
     link: '',
   },
   {
@@ -57,7 +57,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'Shorts 2',
     link: '',
   },
   {
@@ -65,7 +65,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'Shorts 3',
     link: '',
   },
   {
@@ -73,7 +73,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'Shorts 4',
     link: '',
   },
   {
@@ -81,7 +81,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Ufc fight night 2.0',
+    title: 'Shorts 5',
     link: '',
   },
 ];

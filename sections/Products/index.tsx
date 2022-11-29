@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import cx from 'classnames';
 
 // local files
-import { CardWithPictureTitle } from '../../components';
+import { CardPictureTitle } from '../../components';
 import { Section, Slider } from '../../layout';
 import { dataProducts } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
@@ -25,7 +25,7 @@ function Products() {
             }}
           >
             {dataProducts.map((gender, idx) => (
-              <CardWithPictureTitle
+              <CardPictureTitle
                 key={idx}
                 collection={gender}
                 width="w-full"
@@ -35,7 +35,7 @@ function Products() {
           </Slider>
         ) : (
           dataProducts.map((product, idx) => (
-            <CardWithPictureTitle
+            <CardPictureTitle
               key={idx}
               collection={product}
               width="w-full sm:w-1/3"

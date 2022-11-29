@@ -9,7 +9,7 @@ import { ICollection } from '../../types';
 import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
 
-export interface PropsCardWithPictureTitle {
+export interface PropsCardTitleBottom {
   collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
@@ -18,7 +18,7 @@ export interface PropsCardWithPictureTitle {
 /**
  * Post card component that is shown in home page
  */
-const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
+const CardTitleBottom: React.FC<PropsCardTitleBottom> = ({
   collection,
   width,
   height,
@@ -28,14 +28,13 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
 
   return (
     <Link href={`/collection/${collection.link}`}>
-      <div
-        className={cx(
-          'relative mx-0.5 cursor-pointer overflow-hidden',
-          width,
-          height
-        )}
-      >
-        <div className="relative h-full w-full transition-transform duration-200 ease-in-out hover:scale-105">
+      <div className={cx('mx-0.5 cursor-pointer overflow-hidden', width)}>
+        <div
+          className={cx(
+            'relative w-full transition-transform duration-200 ease-in-out hover:scale-105',
+            height
+          )}
+        >
           <Image
             src={
               isMobileScreenSize ? collection.imageMobile : collection.imageDesk
@@ -46,12 +45,7 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
             objectPosition="center"
           />
         </div>
-
-        <Title
-          className={cx('absolute bottom-0 left-0 w-full px-5 py-4', {
-            'bottom-20 text-center': isMobileScreenSize,
-          })}
-        >
+        <Title className="w-full px-5 py-4 text-center text-3xl text-c-dark">
           {collection.title}
         </Title>
       </div>
@@ -59,4 +53,4 @@ const CardWithPictureTitle: React.FC<PropsCardWithPictureTitle> = ({
   );
 };
 
-export default CardWithPictureTitle;
+export default CardTitleBottom;
