@@ -10,7 +10,7 @@ import {
 } from '../redux/slices/appSlice';
 
 /**
- * Custom hook that detect when user is using screen width < 600 (mobile)
+ * Custom hook that detect when user is using screen width < 768 (mobile)
  * Using event listener on window windowSize.innerWidth
  */
 function useDetectMobileScreenSize() {
@@ -18,10 +18,10 @@ function useDetectMobileScreenSize() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // set isMobileScreenSize in store true if window width < 600
+    // set isMobileScreenSize in store true if window width < 768
     function handleWindowResize() {
       const screenWidth = getWindowWidth();
-      if (screenWidth > 600) {
+      if (screenWidth > 768) {
         dispatch(on_desk_screen_width({}));
       } else {
         dispatch(on_mobile_screen_width({}));

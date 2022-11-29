@@ -39,7 +39,7 @@ const Slider: React.FC<PropsSlider> = ({
     : [Navigation, Autoplay, Pagination];
 
   return (
-    <div className="relative">
+    <div className="relative md:pb-11">
       <Swiper
         autoplay={{
           delay: 5000,
@@ -82,10 +82,7 @@ const Slider: React.FC<PropsSlider> = ({
           <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" />
         </svg>
       </div>
-      <div
-        ref={paginationRef}
-        className="flex items-center justify-center pt-9 pb-1"
-      ></div>
+      <div ref={paginationRef} className="swiper-pagination-custom"></div>
     </div>
   );
 };

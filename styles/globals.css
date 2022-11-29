@@ -9,10 +9,21 @@ html {
 
 :root {
   --c-dark: #070707;
-  --swiper-theme-color: #070707 !important;
+  --swiper-theme-color: white !important;
+  --swiper-pagination-bullet-inactive-color: white !important;
 }
 
 /* override slider navigation buttons */
+.swiper-pagination-custom {
+  position: absolute;
+  bottom: 30px !important;
+  z-index: 20;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .swiper-pagination-bullet {
   height: 3px !important;
   width: 40px !important;
@@ -21,9 +32,18 @@ html {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
+  :root {
+    --swiper-theme-color: #070707 !important;
+    --swiper-pagination-bullet-inactive-color: #070707 !important;
+  }
+
   html {
     font-size: 10px;
+  }
+
+  .swiper-pagination-custom {
+    bottom: 0 !important;
   }
 
   .swiper-pagination-bullet {

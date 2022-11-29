@@ -25,7 +25,7 @@ function Categories() {
             slidesPerView: 4,
             spaceBetween: 3,
           },
-          600: {
+          768: {
             slidesPerView: 3,
             spaceBetween: 3,
           },
