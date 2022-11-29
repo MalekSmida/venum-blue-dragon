@@ -58,6 +58,9 @@ module.exports = {
           },
         ],
       },
+      spacing: {
+        arrow: 'calc((100% - 2.75rem) /2 )', // so that arrows in swipe component are centered
+      },
     },
   },
   plugins: [],
