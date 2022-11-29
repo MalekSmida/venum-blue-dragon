@@ -1,4 +1,5 @@
 // node modules
+import { Children } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, SwiperOptions } from 'swiper';
 import 'swiper/css/bundle';
@@ -8,14 +9,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
 // local files
-import { CardWithPictureTitle } from '../../components';
-import { ICollection } from '../../types';
 import useSwiperRef from '../../hooks/useSwipeRef';
 
 // typing
 interface PropsSlider {
-  itemList: ICollection[];
-  cardHeight: string;
+  children: React.ReactNode;
   breakpoints: {
     [width: number]: SwiperOptions;
     [ratio: string]: SwiperOptions;
@@ -24,8 +22,7 @@ interface PropsSlider {
 }
 
 const Slider: React.FC<PropsSlider> = ({
-  itemList,
-  cardHeight,
+  children,
   breakpoints,
   hidePagination = false,
 }) => {
@@ -56,14 +53,8 @@ const Slider: React.FC<PropsSlider> = ({
         modules={swiperModules}
         breakpoints={breakpoints}
       >
-        {itemList.map((collection, idx) => (
-          <SwiperSlide key={idx}>
-            <CardWithPictureTitle
-              collection={collection}
-              width="w-full"
-              height={cardHeight}
-            />
-          </SwiperSlide>
+        {Children.map(children, (child, idx) => (
+          <SwiperSlide key={idx}>{child}</SwiperSlide>
         ))}
       </Swiper>
       <div
