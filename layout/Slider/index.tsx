@@ -29,8 +29,8 @@ const Slider: React.FC<PropsSlider> = ({
   hidePagination = false,
 }) => {
   const swiperModules = hidePagination
-    ? [Navigation]
-    : [Navigation, Pagination];
+    ? [Navigation, Autoplay]
+    : [Navigation, Autoplay, Pagination];
 
   return (
     <Swiper
