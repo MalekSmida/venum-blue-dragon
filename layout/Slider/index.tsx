@@ -10,6 +10,7 @@ import 'swiper/css/autoplay';
 // local files
 import { CardWithPictureTitle } from '../../components';
 import { ICollection } from '../../types';
+import useSwiperRef from '../../hooks/useSwipeRef';
 
 // typing
 interface PropsSlider {
@@ -28,33 +29,64 @@ const Slider: React.FC<PropsSlider> = ({
   breakpoints,
   hidePagination = false,
 }) => {
+  // custom hooks
+  const [nextEl, nextElRef] = useSwiperRef<HTMLDivElement>();
+  const [prevEl, prevElRef] = useSwiperRef<HTMLDivElement>();
+  const [paginationEl, paginationRef] = useSwiperRef<HTMLDivElement>();
+
   const swiperModules = hidePagination
     ? [Navigation, Autoplay]
     : [Navigation, Autoplay, Pagination];
 
   return (
-    <Swiper
-      autoplay={{
-        delay: 5000,
-      }}
-      slidesPerView={1}
-      navigation={true}
-      pagination={{
-        clickable: true,
-      }}
-      modules={swiperModules}
-      breakpoints={breakpoints}
-    >
-      {itemList.map((collection, idx) => (
-        <SwiperSlide key={idx}>
-          <CardWithPictureTitle
-            collection={collection}
-            width="w-full"
-            height={cardHeight}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="relative">
+      <Swiper
+        autoplay={{
+          delay: 5000,
+        }}
+        slidesPerView={1}
+        navigation={{
+          prevEl,
+          nextEl,
+        }}
+        pagination={{
+          el: paginationEl,
+          clickable: true,
+        }}
+        modules={swiperModules}
+        breakpoints={breakpoints}
+      >
+        {itemList.map((collection, idx) => (
+          <SwiperSlide key={idx}>
+            <CardWithPictureTitle
+              collection={collection}
+              width="w-full"
+              height={cardHeight}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div
+        ref={prevElRef}
+        className="absolute -left-8 top-1/2 z-20 cursor-pointer"
+      >
+        <svg width="24" height="24" fill-rule="evenodd" clip-rule="evenodd">
+          <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z" />
+        </svg>
+      </div>
+      <div
+        ref={nextElRef}
+        className="absolute -right-8 top-1/2 z-20 cursor-pointer"
+      >
+        <svg width="24" height="24" fill-rule="evenodd" clip-rule="evenodd">
+          <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" />
+        </svg>
+      </div>
+      <div
+        ref={paginationRef}
+        className="flex items-center justify-center pt-9 pb-1"
+      ></div>
+    </div>
   );
 };
 
