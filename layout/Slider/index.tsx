@@ -6,13 +6,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { useSelector } from 'react-redux';
-import cx from 'classnames';
 
 // local files
 import { CardWithPictureTitle } from '../../components';
 import { ICollection } from '../../types';
-import { selectApp } from '../../redux/slices/appSlice';
 
 // typing
 interface PropsSlider {
@@ -31,14 +28,9 @@ const Slider: React.FC<PropsSlider> = ({
   breakpoints,
   hidePagination = false,
 }) => {
-  // redux
-  const { isMobileScreenSize } = useSelector(selectApp);
-
-  const swiperModules = isMobileScreenSize
-    ? hidePagination
-      ? []
-      : [Pagination] // hide navigation on mobile screen
-    : [Navigation, Pagination]; // show pagination and navigation on desk
+  const swiperModules = hidePagination
+    ? [Navigation]
+    : [Navigation, Pagination];
 
   return (
     <Swiper
@@ -46,7 +38,7 @@ const Slider: React.FC<PropsSlider> = ({
         delay: 5000,
       }}
       slidesPerView={1}
-      navigation={!isMobileScreenSize}
+      navigation={true}
       pagination={{
         clickable: true,
       }}

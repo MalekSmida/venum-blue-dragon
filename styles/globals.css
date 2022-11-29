@@ -14,6 +14,12 @@ html {
 }
 
 /* override slider navigation buttons */
+/* hide navigation buttons on mobile screens */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 2rem !important;
@@ -29,9 +35,13 @@ html {
   border-radius: 25px !important;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   html {
     font-size: 10px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
   }
   .swiper-pagination-bullet {
     height: 4px !important;
