@@ -14,7 +14,7 @@ import useSwiperRef from '../../hooks/useSwipeRef';
 // typing
 interface PropsSlider {
   children: React.ReactNode;
-  breakpoints: {
+  breakpoints?: {
     [width: number]: SwiperOptions;
     [ratio: string]: SwiperOptions;
   };
