@@ -16,7 +16,7 @@ function Gender() {
     <Section>
       <div className={cx('w-full', { 'flex flex-row': !isMobileScreenSize })}>
         {isMobileScreenSize ? (
-          <Slider hidePagination>
+          <Slider>
             {dataGender.map((gender, idx) => (
               <CardPictureTitleButtons
                 key={idx}
@@ -24,6 +24,7 @@ function Gender() {
                 width="w-full"
                 height="h-c-800"
                 isContentCenter
+                withPagination
               />
             ))}
           </Slider>

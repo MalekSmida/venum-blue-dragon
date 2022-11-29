@@ -13,6 +13,7 @@ export interface PropsCardPictureTitle {
   collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
+  withPagination?: boolean;
 }
 
 /**
@@ -22,6 +23,7 @@ const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
   collection,
   width,
   height,
+  withPagination = false,
 }) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
@@ -49,7 +51,7 @@ const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
 
         <Title
           className={cx('absolute bottom-0 left-0 w-full px-5 py-4', {
-            'bottom-20 text-center': isMobileScreenSize,
+            'bottom-20 text-center': withPagination && isMobileScreenSize,
           })}
         >
           {collection.title}

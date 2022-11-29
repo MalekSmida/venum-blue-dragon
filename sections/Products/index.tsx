@@ -30,6 +30,7 @@ function Products() {
                 collection={gender}
                 width="w-full"
                 height="h-c-750"
+                withPagination
               />
             ))}
           </Slider>

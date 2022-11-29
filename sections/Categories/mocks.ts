@@ -57,7 +57,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Shorts 2',
+    title: 'Title 5',
     link: '',
   },
   {
@@ -65,7 +65,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Shorts 3',
+    title: 'Title 6',
     link: '',
   },
   {
@@ -73,7 +73,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Shorts 4',
+    title: 'Title 7',
     link: '',
   },
   {
@@ -81,7 +81,7 @@ export const dataCategory: Array<ICollection> = [
     imageDesk:
       'https://euro.venum.com/media/homepush-venum/220928_LANDING-PAGE-FIGHT-NIGHT-2.0-US_03.jpg',
     imageMobile: 'https://cdn-icons-png.flaticon.com/512/387/387564.png',
-    title: 'Shorts 5',
+    title: 'Title 8',
     link: '',
   },
 ];

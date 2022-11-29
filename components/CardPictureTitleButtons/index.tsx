@@ -15,6 +15,7 @@ interface PropsCardPictureTitleButtons {
   width: string; // Tailwind width class
   height: string; // Tailwind height class
   isContentCenter?: boolean;
+  withPagination?: boolean;
 }
 
 /**
@@ -25,6 +26,7 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
   width,
   height,
   isContentCenter = false,
+  withPagination = false,
 }) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
@@ -47,7 +49,8 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
         className={cx(
           'absolute bottom-0 left-0 flex w-full flex-col justify-center p-10',
 
-          { 'items-center': isContentCenter }
+          { 'items-center': isContentCenter },
+          { 'bottom-20 text-center': withPagination && isMobileScreenSize }
         )}
       >
         {collection.title && <Title>{collection.title}</Title>}

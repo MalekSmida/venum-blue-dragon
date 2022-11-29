@@ -7,18 +7,18 @@ export const dataGender: Array<ICollection> = [
       'https://euro.venum.com/media/homepush-venum/UFC-VENUM_B2C_MOBILE_1000x1000y.jpg',
     imageMobile:
       'https://euro.venum.com/media/homepush-venum/UFC-VENUM_B2C_MOBILE_1000x1000y.jpg',
-    title: 'Ufc fight night 2.0',
+    title: 'Sélection pour lui',
     listButtons: [
       {
         title: 'Lifestyle',
         link: '',
       },
       {
-        title: 'Lifestyle',
+        title: 'Training',
         link: '',
       },
       {
-        title: 'Lifestyle',
+        title: 'Equipements',
         link: '',
       },
     ],
@@ -29,7 +29,7 @@ export const dataGender: Array<ICollection> = [
       'https://euro.venum.com/media/homepush-venum/UFC-VENUM_B2C_MOBILE_1000x1000y.jpg',
     imageMobile:
       'https://euro.venum.com/media/homepush-venum/UFC-VENUM_B2C_MOBILE_1000x1000y.jpg',
-    title: 'Ufc fight night 2.0',
+    title: 'Sélection pour elle',
     listButtons: [
       {
         title: 'Lifestyle',

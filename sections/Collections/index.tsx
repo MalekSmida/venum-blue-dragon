@@ -28,6 +28,7 @@ function Collections() {
             collection={collection}
             width="w-full"
             height="h-c-665"
+            withPagination
           />
         ))}
       </Slider>
