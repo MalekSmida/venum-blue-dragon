@@ -8,6 +8,7 @@ const nextConfig = {
       'a.storyblok.com',
       'euro.venum.com',
       'venumtrainingcamp.com',
+      'cdn-icons-png.flaticon.com',
     ],
   },
 };

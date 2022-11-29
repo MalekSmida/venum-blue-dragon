@@ -1,6 +1,6 @@
 // node modules
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper';
+import { Navigation, Pagination, Autoplay, SwiperOptions } from 'swiper';
 import 'swiper/css/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,12 +15,19 @@ import { ICollection } from '../../types';
 interface PropsSlider {
   itemList: ICollection[];
   cardHeight: string;
+  breakpoints: {
+    [width: number]: SwiperOptions;
+    [ratio: string]: SwiperOptions;
+  };
 }
 
-const Slider: React.FC<PropsSlider> = ({ itemList, cardHeight }) => {
+const Slider: React.FC<PropsSlider> = ({
+  itemList,
+  cardHeight,
+  breakpoints,
+}) => {
   return (
     <Swiper
-      spaceBetween={0}
       autoplay={{
         delay: 5000,
       }}
@@ -30,21 +37,7 @@ const Slider: React.FC<PropsSlider> = ({ itemList, cardHeight }) => {
         clickable: true,
       }}
       modules={[Navigation, Pagination, Autoplay]}
-      breakpoints={{
-        480: {
-          slidesPerView: 2,
-          spaceBetween: 3,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 3,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 3,
-        },
-      }}
-      className="mySwiper"
+      breakpoints={breakpoints}
     >
       {itemList.map((collection, idx) => (
         <SwiperSlide key={idx}>
