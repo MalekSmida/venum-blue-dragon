@@ -49,8 +49,8 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
         className={cx(
           'absolute bottom-0 left-0 flex w-full flex-col justify-center p-10',
 
-          { 'items-center': isContentCenter },
-          { 'bottom-20 text-center': withPagination && isMobileScreenSize }
+          { 'items-center text-center': isContentCenter },
+          { 'bottom-20': withPagination && isMobileScreenSize }
         )}
       >
         {collection.title && <Title>{collection.title}</Title>}

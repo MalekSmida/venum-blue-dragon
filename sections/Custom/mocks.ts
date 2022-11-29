@@ -21,7 +21,7 @@ export const dataCustom: ICollection = {
     'https://euro.venum.com/media/venum-ufc/VENUM_PAGE_HISTOIRE_UFC_MOBILE_02_08.jpg',
   imageMobile:
     'https://euro.venum.com/media/venum-ufc/VENUM_PAGE_HISTOIRE_UFC_MOBILE_02_08.jpg',
-  title: 'Ufc fight night 2.0',
+  title: 'Gants Custom',
   description:
     "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières… Des possibilités infinies pour créer des gants qui te ressemblent.",
   link: '',
