@@ -60,7 +60,7 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
         {collection.title && !hideTitle && <Title>{collection.title}</Title>}
 
         {collection.description && (
-          <Description className="max-w-md py-5 opacity-90">
+          <Description className="max-w-md py-5">
             {collection.description}
           </Description>
         )}

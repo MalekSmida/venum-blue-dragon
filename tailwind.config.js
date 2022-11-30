@@ -34,21 +34,31 @@ module.exports = {
       },
       fontSize: {
         'c-16': [
-          '16px', // 22px on a root font-size of 16px
+          '16px',
           {
             lineHeight: '1.75rem',
+            fontWeight: '400',
+          },
+        ],
+        'c-18': [
+          '18px',
+          {
+            lineHeight: '1.75rem',
+            fontWeight: '400',
           },
         ],
         xl: [
           '1.375rem', // 22px on a root font-size of 16px
           {
             lineHeight: '1.75rem',
+            fontWeight: '400',
           },
         ],
         '2xl': [
-          '1.5rem',
+          '1.5rem', // 24 px
           {
             lineHeight: '2rem',
+            fontWeight: '400',
           },
         ],
         '4xl': [
