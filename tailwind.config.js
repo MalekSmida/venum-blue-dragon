@@ -14,6 +14,7 @@ module.exports = {
         'c-20': '20deg',
       },
       padding: {
+        'c-5': '5px',
         'c-63': '3.938rem',
         'c-72': '4.5rem',
       },
