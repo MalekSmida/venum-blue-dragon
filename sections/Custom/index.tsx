@@ -35,7 +35,7 @@ function Categories() {
               collection={dataCustom}
               width="w-full"
               height="h-c-700"
-              withPagination
+              hideTitle
             />
           </Slider>
         </>

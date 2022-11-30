@@ -4,7 +4,7 @@
 
 html {
   font-family: alternate-gothic-atf;
-  font-size: 9px;
+  font-size: 10px;
 }
 
 :root {
@@ -32,6 +32,12 @@ html {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 11px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   :root {
     --swiper-theme-color: #070707 !important;
@@ -39,7 +45,7 @@ html {
   }
 
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .swiper-pagination-custom {
@@ -55,7 +61,7 @@ html {
 
 @media only screen and (min-width: 1024px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 

@@ -22,7 +22,7 @@ const MenuNav: React.FC<PropsMenuNav> = ({ listMenu, handleClick }) => {
     <li>
       <span
         className={cx(
-          'relative mx-8 cursor-pointer select-none before:absolute before:-bottom-1 before:h-0.5 before:w-full before:bg-c-dark',
+          'relative mx-3 cursor-pointer select-none before:absolute before:-bottom-1 before:h-0.5 before:w-full before:bg-c-dark md:mx-8',
           {
             'text-gray-400 transition-colors duration-300 ease-in-out before:origin-left before:scale-x-0 before:transition hover:text-c-dark hover:before:scale-100':
               !isSelected,

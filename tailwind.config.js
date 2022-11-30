@@ -33,6 +33,12 @@ module.exports = {
         'c-dark': 'var(--c-dark)',
       },
       fontSize: {
+        'c-16': [
+          '16px', // 22px on a root font-size of 16px
+          {
+            lineHeight: '1.75rem',
+          },
+        ],
         xl: [
           '1.375rem', // 22px on a root font-size of 16px
           {
@@ -56,7 +62,7 @@ module.exports = {
           '2.813rem', // 45px
           {
             lineHeight: '2.5rem',
-            fontWeight: '600',
+            fontWeight: '700',
           },
         ],
       },

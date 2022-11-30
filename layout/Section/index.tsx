@@ -19,7 +19,7 @@ const Section: React.FC<PropsSection> = ({ title, children }) => {
     <div className="mx-auto w-full max-w-c-1920 py-2.5 md:px-c-63 md:py-9">
       {title && (
         <h1
-          className={cx('pb-7 text-5xl text-c-dark', {
+          className={cx('pb-5 pt-6 text-5xl text-c-dark', {
             'text-center': isMobileScreenSize,
           })}
         >
