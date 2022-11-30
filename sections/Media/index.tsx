@@ -4,12 +4,7 @@ import cx from 'classnames';
 
 // local files
 import { selectApp } from '../../redux/slices/appSlice';
-import {
-  Video,
-  Button,
-  Title,
-  CardPictureTitleButtons,
-} from '../../components';
+import { Video, Button, Title, CardMedia } from '../../components';
 import { Slider } from '../../layout';
 import { dataMedia } from './mocks';
 
@@ -37,8 +32,8 @@ function Media() {
             <Button title="Découvrir" link="/home" />
           </div>
         </>
-        {Array.from({ length: 3 }, (_, idx) => idx).map((item) => (
-          <CardPictureTitleButtons
+        {Array.from({ length: 1 }, (_, idx) => idx).map((item) => (
+          <CardMedia
             key={item}
             collection={dataMedia}
             width="w-full"

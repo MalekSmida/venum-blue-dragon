@@ -27,7 +27,7 @@ export const dataCustom: ICollection = {
   link: '',
   listButtons: [
     {
-      title: 'Lifestyle',
+      title: 'Decouvrir',
       link: '',
     },
   ],
