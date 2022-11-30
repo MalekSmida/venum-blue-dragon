@@ -59,18 +59,42 @@ const Slider: React.FC<PropsSlider> = ({
       </Swiper>
       <div
         ref={prevElRef}
-        className="absolute -left-10 top-arrow z-20 hidden cursor-pointer md:block"
+        className="absolute -left-9 top-arrow z-20 hidden cursor-pointer md:block"
       >
-        <svg width="24" height="24" fillRule="evenodd" clipRule="evenodd">
-          <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="29"
+          fill="none"
+        >
+          <path
+            fill="#070707"
+            d="m14.142 0 1.414 1.414L1.414 15.556 0 14.142z"
+          />
+          <path
+            fill="#070707"
+            d="m15.557 27.142-1.415 1.414L0 14.414 1.414 13z"
+          />
         </svg>
       </div>
       <div
         ref={nextElRef}
-        className="absolute -right-10 top-arrow z-20 hidden cursor-pointer md:block"
+        className="absolute -right-9 top-arrow z-20 hidden cursor-pointer md:block"
       >
-        <svg width="24" height="24" fillRule="evenodd" clipRule="evenodd">
-          <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="29"
+          fill="none"
+        >
+          <path
+            fill="#070707"
+            d="M1.414 28.557 0 27.143 14.142 13l1.414 1.415z"
+          />
+          <path
+            fill="#070707"
+            d="M0 1.414 1.414 0l14.142 14.142-1.414 1.414z"
+          />
         </svg>
       </div>
       <div ref={paginationRef} className="swiper-pagination-custom"></div>
