@@ -29,7 +29,7 @@ function Media() {
             )}
           >
             <Title className="pb-5 pl-3 md:pb-11">Les gants GIANT 3.0</Title>
-            <Button title="Découvrir" link="/home" />
+            <Button _id="" title="Découvrir" link="/home" />
           </div>
         </>
         {Array.from({ length: 1 }, (_, idx) => idx).map((item) => (

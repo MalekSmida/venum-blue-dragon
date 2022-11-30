@@ -38,7 +38,7 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
       className={cx(
         'relative mx-0.5',
         width,
-        isMobileScreenSize ? 'h-c-575' : height
+        isMobileScreenSize ? 'h-c-575' : height // default height of cards in mobile screens
       )}
     >
       <div className="relative h-full w-full">
@@ -57,7 +57,6 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
       <div
         className={cx(
           'absolute bottom-0 left-0 flex w-full flex-col justify-center p-10',
-
           { 'items-center text-center': isContentCenter },
           { 'md:p-16': !isContentCenter },
           { 'bottom-20': withPagination && isMobileScreenSize }

@@ -16,9 +16,6 @@ export interface PropsCardPictureTitle {
   withPagination?: boolean;
 }
 
-/**
- * Post card component that is shown in home page
- */
 const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
   collection,
   width,
@@ -29,36 +26,36 @@ const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <Link href={`/collection/${collection.link}`}>
-      <div
-        className={cx(
-          'relative mx-0.5 cursor-pointer overflow-hidden',
-          width,
-          isMobileScreenSize ? 'h-c-575' : height
-        )}
-      >
-        <div className="relative h-full w-full transition-transform duration-200 ease-in-out hover:scale-105">
-          <Image
-            src={
-              isMobileScreenSize ? collection.imageMobile : collection.imageDesk
-            }
-            alt={collection.title}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            priority
-          />
-        </div>
-
-        <Title
-          className={cx('absolute bottom-0 left-0 w-full px-5 py-4', {
-            'bottom-20 text-center': withPagination && isMobileScreenSize,
-          })}
-        >
-          {collection.title}
-        </Title>
+    // <Link href={`/collection/${collection.link}`}>
+    <div
+      className={cx(
+        'relative mx-0.5 cursor-pointer overflow-hidden',
+        width,
+        isMobileScreenSize ? 'h-c-575' : height // default height of cards in mobile screens
+      )}
+    >
+      <div className="relative h-full w-full transition-transform duration-200 ease-in-out hover:scale-105">
+        <Image
+          src={
+            isMobileScreenSize ? collection.imageMobile : collection.imageDesk
+          }
+          alt={collection.title}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority
+        />
       </div>
-    </Link>
+
+      <Title
+        className={cx('absolute bottom-0 left-0 w-full px-5 py-4', {
+          'bottom-20 text-center': withPagination && isMobileScreenSize,
+        })}
+      >
+        {collection.title}
+      </Title>
+    </div>
+    // </Link>
   );
 };
 

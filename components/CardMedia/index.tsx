@@ -15,9 +15,6 @@ interface PropsCardMedia {
   height: string; // Tailwind height class
 }
 
-/**
- * Post card component that is shown in home page
- */
 const CardMedia: React.FC<PropsCardMedia> = ({ collection, width, height }) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
@@ -46,7 +43,7 @@ const CardMedia: React.FC<PropsCardMedia> = ({ collection, width, height }) => {
         )}
       >
         <Title className="pb-5 pl-3 md:pb-11">{collection.title}</Title>
-        <Button title="Découvrir" link="/home" />
+        <Button _id="" title="Découvrir" link="/home" />
       </div>
     </div>
   );
