@@ -18,9 +18,9 @@ export const dataMenuCostum: Array<IButtonLink> = [
 export const dataCustom: ICollection = {
   _id: '0',
   imageDesk:
-    'https://euro.venum.com/media/venum-ufc/VENUM_PAGE_HISTOIRE_UFC_MOBILE_02_08.jpg',
+    'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802130/Venum/Groupe_de_masques_130_kbr0di.jpg',
   imageMobile:
-    'https://euro.venum.com/media/venum-ufc/VENUM_PAGE_HISTOIRE_UFC_MOBILE_02_08.jpg',
+    'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802299/Venum/Mobile/Gants-Custom_Mobile_ne1ltu.jpg',
   title: 'Gants Custom',
   description:
     "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières… Des possibilités infinies pour créer des gants qui te ressemblent.",
