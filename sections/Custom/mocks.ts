@@ -27,7 +27,7 @@ export const dataCustom: Array<ICollection> = [
       'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802299/Venum/Mobile/Gants-Custom_Mobile_ne1ltu.jpg',
     title: 'Gants Custom',
     description:
-      "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières… Des possibilités infinies pour créer des gants qui te ressemblent.",
+      "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières…",
     link: '',
     listButtons: [
       {
@@ -45,7 +45,7 @@ export const dataCustom: Array<ICollection> = [
       'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802301/Venum/Mobile/Kits-Personnalise%CC%81-Custom_Mobile_btxqee.jpg',
     title: 'Kits personnalisés',
     description:
-      "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières… Des possibilités infinies pour créer des gants qui te ressemblent.",
+      "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières…",
     link: '',
     listButtons: [
       {
@@ -63,7 +63,7 @@ export const dataCustom: Array<ICollection> = [
       'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802301/Venum/Mobile/Kits-Fighter-Custom_Mobile_qif2fb.jpg',
     title: 'Kits fighters',
     description:
-      "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières… Des possibilités infinies pour créer des gants qui te ressemblent.",
+      "8 modèles de gants, jusqu'à 20 zones personnalisables, près de 20 couleurs, 3 matières…",
     link: '',
     listButtons: [
       {

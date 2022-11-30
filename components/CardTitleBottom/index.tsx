@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 // local files
 import { ICollection } from '../../types';
-import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
 
 export interface PropsCardTitleBottom {
@@ -46,9 +45,9 @@ const CardTitleBottom: React.FC<PropsCardTitleBottom> = ({
             priority
           />
         </div>
-        <Title className="w-full px-5 py-4 text-center text-3xl text-c-dark">
+        <h2 className="w-full px-5 py-4 text-center text-c-16 text-c-dark">
           {collection.title}
-        </Title>
+        </h2>
       </div>
     </Link>
   );

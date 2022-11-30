@@ -8,7 +8,11 @@ interface PropsTitle {
 }
 
 const Title: React.FC<PropsTitle> = ({ children, className }) => {
-  return <h1 className={cx('text-4xl text-white', className)}>{children}</h1>;
+  return (
+    <h1 className={cx('text-c-30 text-white md:text-4xl', className)}>
+      {children}
+    </h1>
+  );
 };
 
 export default Title;

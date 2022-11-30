@@ -39,14 +39,21 @@ module.exports = {
         'c-16': [
           '16px',
           {
-            lineHeight: '1.75rem',
+            lineHeight: '24px',
             fontWeight: '400',
           },
         ],
         'c-18': [
           '18px',
           {
-            lineHeight: '1.75rem',
+            lineHeight: '28px',
+            fontWeight: '400',
+          },
+        ],
+        'c-30': [
+          '30px',
+          {
+            lineHeight: '36px',
             fontWeight: '400',
           },
         ],
