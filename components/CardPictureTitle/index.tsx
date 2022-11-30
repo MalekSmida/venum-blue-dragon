@@ -46,6 +46,7 @@ const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            priority
           />
         </div>
 

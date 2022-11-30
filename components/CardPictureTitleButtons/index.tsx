@@ -42,6 +42,7 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
           layout="fill"
           objectFit="cover"
           objectPosition="center"
+          priority
         />
       </div>
 
@@ -50,6 +51,7 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
           'absolute bottom-0 left-0 flex w-full flex-col justify-center p-10',
 
           { 'items-center text-center': isContentCenter },
+          { 'md:p-16': !isContentCenter },
           { 'bottom-20': withPagination && isMobileScreenSize }
         )}
       >
@@ -64,7 +66,7 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
         {collection.listButtons && (
           <div
             className={cx('flex flex-wrap items-center pt-6', {
-              'justify-center': isMobileScreenSize,
+              'justify-center': isMobileScreenSize || isContentCenter,
             })}
           >
             {collection.listButtons.map((propsButton, idx) => (

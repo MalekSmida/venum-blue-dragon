@@ -43,6 +43,7 @@ const CardTitleBottom: React.FC<PropsCardTitleBottom> = ({
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            priority
           />
         </div>
         <Title className="w-full px-5 py-4 text-center text-3xl text-c-dark">
