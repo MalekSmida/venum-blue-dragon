@@ -6,8 +6,8 @@ import { useSelector } from 'react-redux';
 // local files
 import { ICollection } from '../../types';
 import Button from '../Button';
+import Description from '../Description';
 import Title from '../Title';
-import { Description } from '..';
 import { selectApp } from '../../redux/slices/appSlice';
 
 interface PropsCardPictureTitleButtons {
@@ -55,10 +55,12 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
           { 'bottom-20': withPagination && isMobileScreenSize }
         )}
       >
-        {collection.title && <Title>{collection.title}</Title>}
+        {collection.title && isMobileScreenSize && (
+          <Title>{collection.title}</Title>
+        )}
 
         {collection.description && (
-          <Description className="max-w-md py-5">
+          <Description className="max-w-md py-5 opacity-80">
             {collection.description}
           </Description>
         )}

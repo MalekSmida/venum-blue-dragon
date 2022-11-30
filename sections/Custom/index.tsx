@@ -12,7 +12,9 @@ function Categories() {
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <Section title="Découvrir l’expérience Venum Custom">
+    <Section
+      title={isMobileScreenSize ? '' : 'Découvrir l’expérience Venum Custom'}
+    >
       <Slider>
         {Array.from({ length: 2 }, (_, idx) => idx).map((item) => (
           <CardPictureTitleButtons
