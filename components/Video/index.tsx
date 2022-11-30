@@ -20,7 +20,7 @@ const Video: React.FC<PropsVideo> = ({ sourceDesk, sourceMobile }) => {
       autoPlay
       muted
       src={isMobileScreenSize ? sourceMobile : sourceDesk}
-      className="min-w-full"
+      className="h-screen min-w-full bg-c-dark object-cover"
     ></video>
   );
 };
