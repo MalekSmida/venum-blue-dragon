@@ -34,7 +34,13 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <div className={cx('relative mx-0.5', width, height)}>
+    <div
+      className={cx(
+        'relative mx-0.5',
+        width,
+        isMobileScreenSize ? 'h-c-575' : height
+      )}
+    >
       <div className="relative h-full w-full">
         <Image
           src={

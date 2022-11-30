@@ -34,7 +34,7 @@ const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
         className={cx(
           'relative mx-0.5 cursor-pointer overflow-hidden',
           width,
-          height
+          isMobileScreenSize ? 'h-c-575' : height
         )}
       >
         <div className="relative h-full w-full transition-transform duration-200 ease-in-out hover:scale-105">
