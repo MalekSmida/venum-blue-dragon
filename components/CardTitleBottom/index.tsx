@@ -41,7 +41,7 @@ const CardTitleBottom: React.FC<PropsCardTitleBottom> = ({
             }
             alt={collection.title}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             objectPosition="center"
             priority
           />

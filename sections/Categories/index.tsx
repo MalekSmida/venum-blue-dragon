@@ -17,6 +17,10 @@ function Categories() {
       <Slider
         breakpoints={{
           1: {
+            slidesPerView: 3,
+            spaceBetween: 3,
+          },
+          400: {
             slidesPerView: 4,
             spaceBetween: 3,
           },
