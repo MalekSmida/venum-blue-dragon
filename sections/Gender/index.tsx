@@ -17,9 +17,9 @@ function Gender() {
       <div className={cx('w-full', { 'flex flex-row': !isMobileScreenSize })}>
         {isMobileScreenSize ? (
           <Slider>
-            {dataGender.map((gender, idx) => (
+            {dataGender.map((gender) => (
               <CardPictureTitleButtons
-                key={idx}
+                key={gender._id}
                 collection={gender}
                 width="w-full"
                 height="h-c-800"
@@ -29,9 +29,9 @@ function Gender() {
             ))}
           </Slider>
         ) : (
-          dataGender.map((gender, idx) => (
+          dataGender.map((gender) => (
             <CardPictureTitleButtons
-              key={idx}
+              key={gender._id}
               collection={gender}
               width="w-full lg:w-1/2"
               height="h-c-800"

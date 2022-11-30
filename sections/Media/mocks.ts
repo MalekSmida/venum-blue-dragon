@@ -10,6 +10,7 @@ export const dataMedia: ICollection = {
   link: '',
   listButtons: [
     {
+      _id: '0',
       title: 'Decouvrir',
       link: '',
     },

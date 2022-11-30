@@ -17,10 +17,10 @@ function Categories() {
     >
       {isMobileScreenSize ? (
         <Slider>
-          {Array.from({ length: 3 }, (_, idx) => idx).map((item) => (
+          {dataCustom.map((customCollection) => (
             <CardPictureTitleButtons
-              key={item}
-              collection={dataCustom}
+              key={customCollection._id}
+              collection={customCollection}
               width="w-full"
               height="h-c-700"
               withPagination
@@ -32,7 +32,7 @@ function Categories() {
           <MenuNav listMenu={dataMenuCostum} handleClick={() => {}} />
           <Slider>
             <CardPictureTitleButtons
-              collection={dataCustom}
+              collection={dataCustom[0]}
               width="w-full"
               height="h-c-700"
               hideTitle

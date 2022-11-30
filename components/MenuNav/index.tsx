@@ -40,7 +40,11 @@ const MenuNav: React.FC<PropsMenuNav> = ({ listMenu, handleClick }) => {
   return (
     <ul className="mb-5 flex items-center justify-center text-3xl">
       {listMenu.map((buttonMenu, idx) => (
-        <ButtonLink key={idx} buttonMenu={buttonMenu} isSelected={idx === 0} />
+        <ButtonLink
+          key={buttonMenu._id}
+          buttonMenu={buttonMenu}
+          isSelected={idx === 0}
+        />
       ))}
     </ul>
   );

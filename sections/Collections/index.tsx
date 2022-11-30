@@ -22,9 +22,9 @@ function Collections() {
           },
         }}
       >
-        {dataCollection.map((collection, idx) => (
+        {dataCollection.map((collection) => (
           <CardPictureTitle
-            key={idx}
+            key={collection._id}
             collection={collection}
             width="w-full"
             height="h-c-665"

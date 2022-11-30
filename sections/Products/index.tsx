@@ -24,9 +24,9 @@ function Products() {
               },
             }}
           >
-            {dataProducts.map((gender, idx) => (
+            {dataProducts.map((gender) => (
               <CardPictureTitle
-                key={idx}
+                key={gender._id}
                 collection={gender}
                 width="w-full"
                 height="h-c-750"
@@ -35,9 +35,9 @@ function Products() {
             ))}
           </Slider>
         ) : (
-          dataProducts.map((product, idx) => (
+          dataProducts.map((product) => (
             <CardPictureTitle
-              key={idx}
+              key={product._id}
               collection={product}
               width="w-full sm:w-1/3"
               height="h-c-750"

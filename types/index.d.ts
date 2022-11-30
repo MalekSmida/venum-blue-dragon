@@ -10,6 +10,7 @@ export interface ICollection {
 }
 
 export interface IButtonLink {
+  _id: string;
   title: string;
   link?: string;
 }

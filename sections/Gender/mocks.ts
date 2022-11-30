@@ -10,14 +10,17 @@ export const dataGender: Array<ICollection> = [
     title: 'Sélection pour lui',
     listButtons: [
       {
+        _id: '0',
         title: 'Lifestyle',
         link: '',
       },
       {
+        _id: '1',
         title: 'Training',
         link: '',
       },
       {
+        _id: '2',
         title: 'Equipements',
         link: '',
       },
@@ -32,6 +35,7 @@ export const dataGender: Array<ICollection> = [
     title: 'Sélection pour elle',
     listButtons: [
       {
+        _id: '0',
         title: 'Lifestyle',
         link: '',
       },

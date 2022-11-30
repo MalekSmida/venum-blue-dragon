@@ -2,18 +2,22 @@ import { ICollection, IButtonLink } from '../../types';
 
 export const dataMenuCategory: Array<IButtonLink> = [
   {
+    _id: '0',
     title: 'Hommes',
     link: '',
   },
   {
+    _id: '1',
     title: 'Femmes',
     link: '',
   },
   {
+    _id: '2',
     title: 'Enfants',
     link: '',
   },
   {
+    _id: '3',
     title: 'Equipements',
     link: '',
   },

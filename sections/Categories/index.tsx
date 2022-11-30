@@ -36,17 +36,17 @@ function Categories() {
         hidePagination={isMobileScreenSize}
       >
         {isMobileScreenSize
-          ? dataCategory.map((collection, idx) => (
+          ? dataCategory.map((collection) => (
               <CardTitleBottom
-                key={idx}
+                key={collection._id}
                 collection={collection}
                 width="w-full"
                 height="h-c-91"
               />
             ))
-          : dataCategory.map((collection, idx) => (
+          : dataCategory.map((collection) => (
               <CardPictureTitle
-                key={idx}
+                key={collection._id}
                 collection={collection}
                 width="w-full"
                 height="h-c-450"

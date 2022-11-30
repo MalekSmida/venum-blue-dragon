@@ -71,8 +71,8 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
               'justify-center': isMobileScreenSize || isContentCenter,
             })}
           >
-            {collection.listButtons.map((propsButton, idx) => (
-              <Button key={idx} {...propsButton} />
+            {collection.listButtons.map((propsButton) => (
+              <Button key={propsButton._id} {...propsButton} />
             ))}
           </div>
         )}
