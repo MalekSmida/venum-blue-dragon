@@ -15,17 +15,31 @@ function Categories() {
     <Section
       title={isMobileScreenSize ? '' : 'Découvrir l’expérience Venum Custom'}
     >
-      <Slider>
-        {Array.from({ length: 2 }, (_, idx) => idx).map((item) => (
-          <CardPictureTitleButtons
-            key={item}
-            collection={dataCustom}
-            width="w-full"
-            height="h-c-700"
-            withPagination
-          />
-        ))}
-      </Slider>
+      {isMobileScreenSize ? (
+        <Slider>
+          {Array.from({ length: 3 }, (_, idx) => idx).map((item) => (
+            <CardPictureTitleButtons
+              key={item}
+              collection={dataCustom}
+              width="w-full"
+              height="h-c-700"
+              withPagination
+            />
+          ))}
+        </Slider>
+      ) : (
+        <>
+          <MenuNav listMenu={dataMenuCostum} handleClick={() => {}} />
+          <Slider>
+            <CardPictureTitleButtons
+              collection={dataCustom}
+              width="w-full"
+              height="h-c-700"
+              withPagination
+            />
+          </Slider>
+        </>
+      )}
     </Section>
   );
 }
