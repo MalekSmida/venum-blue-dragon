@@ -13,8 +13,9 @@ import {
 } from '../sections';
 import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
 import { selectApp } from '../redux/slices/appSlice';
+import { storyblokApi } from '../services/storyblok';
 
-export default function Home() {
+export default function Home({ story }: any) {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
@@ -40,4 +41,19 @@ export default function Home() {
       </main>
     </div>
   );
+}
+
+export async function getStaticProps({ preview = false }) {
+  const slug = 'home';
+  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
+    version: 'draft',
+  });
+
+  return {
+    props: {
+      story: data ? data.story : false,
+      preview,
+    },
+    revalidate: 3600, // revalidate every hour
+  };
 }
