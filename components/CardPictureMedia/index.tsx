@@ -46,7 +46,9 @@ const CardPictureMedia: React.FC<PropsCardPictureMedia> = ({
           }
         )}
       >
-        <Title className="pb-5 pl-3 md:pb-11">{collection.title}</Title>
+        {collection.title && (
+          <Title className="pb-5 pl-3 md:pb-11">{collection.title}</Title>
+        )}
         <Button _id="" title="Découvrir" link="/home" />
       </div>
     </div>
