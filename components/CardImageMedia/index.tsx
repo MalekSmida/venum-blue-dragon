@@ -9,13 +9,13 @@ import Button from '../Button';
 import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
 
-interface PropsCardPictureMedia {
+interface PropsCardImageMedia {
   collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
 }
 
-const CardPictureMedia: React.FC<PropsCardPictureMedia> = ({
+const CardImageMedia: React.FC<PropsCardImageMedia> = ({
   collection,
   width,
   height,
@@ -55,4 +55,4 @@ const CardPictureMedia: React.FC<PropsCardPictureMedia> = ({
   );
 };
 
-export default CardPictureMedia;
+export default CardImageMedia;
