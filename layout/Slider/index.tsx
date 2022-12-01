@@ -40,7 +40,7 @@ const Slider: React.FC<PropsSlider> = ({
 
   if (Children.count(children) > 1) {
     return (
-      <div className="relative md:pb-11">
+      <div className="group/arrow relative md:pb-11">
         <Swiper
           autoplay={{
             delay: 5000,
@@ -65,7 +65,10 @@ const Slider: React.FC<PropsSlider> = ({
           ref={prevElRef}
           className={cx(
             'absolute -left-9 top-arrow z-20 hidden cursor-pointer md:block',
-            { 'left-9': insideNavigation }
+            {
+              'left-9 opacity-0 transition-opacity duration-500 group-hover/arrow:opacity-100':
+                insideNavigation,
+            }
           )}
         >
           <svg
@@ -88,7 +91,10 @@ const Slider: React.FC<PropsSlider> = ({
           ref={nextElRef}
           className={cx(
             'absolute -right-9 top-arrow z-20 hidden cursor-pointer md:block',
-            { 'right-9': insideNavigation }
+            {
+              'right-9 opacity-0 transition-opacity duration-500 group-hover/arrow:opacity-100':
+                insideNavigation,
+            }
           )}
         >
           <svg
