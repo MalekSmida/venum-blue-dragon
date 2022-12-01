@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 // local files
 import { selectApp } from '../../redux/slices/appSlice';
-import { Video, Button, Title, CardMedia } from '../../components';
+import { Video, Button, Title, CardPictureMedia } from '../../components';
 import { Slider } from '../../layout';
 import { dataMedia } from './mocks';
 
@@ -33,7 +33,7 @@ function Media() {
           </div>
         </>
         {Array.from({ length: 1 }, (_, idx) => idx).map((item) => (
-          <CardMedia
+          <CardPictureMedia
             key={item}
             collection={dataMedia}
             width="w-full"

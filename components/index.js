@@ -6,4 +6,4 @@ export { default as CardPictureTitleButtons } from './CardPictureTitleButtons';
 export { default as MenuNav } from './MenuNav';
 export { default as Description } from './Description';
 export { default as CardTitleBottom } from './CardTitleBottom';
-export { default as CardMedia } from './CardMedia';
+export { default as CardPictureMedia } from './CardPictureMedia';
