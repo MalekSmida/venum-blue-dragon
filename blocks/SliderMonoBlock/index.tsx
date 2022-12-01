@@ -8,7 +8,10 @@ import { Video, Button, Title, CardImageMedia } from '../../components';
 import { Slider } from '../../layout';
 import { dataMedia } from './mocks';
 
-function Media() {
+/**
+ * Media block component
+ */
+function SliderMonoBlock() {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
@@ -45,4 +48,4 @@ function Media() {
   );
 }
 
-export default Media;
+export default SliderMonoBlock;

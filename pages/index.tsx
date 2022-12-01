@@ -6,16 +6,17 @@ import { useSelector } from 'react-redux';
 import {
   Collections,
   Gender,
-  Media,
+  SliderMonoBlock,
   Categories,
   Products,
   Custom,
-} from '../sections';
+} from '../blocks';
 import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
 import { selectApp } from '../redux/slices/appSlice';
 import { storyblokApi } from '../services/storyblok';
 
 export default function Home({ story }: any) {
+  console.log(story);
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
@@ -34,7 +35,7 @@ export default function Home({ story }: any) {
       </Head>
 
       <main>
-        <Media />
+        <SliderMonoBlock />
         {isMobileScreenSize && <Categories />}
         <Collections />
         <Gender />
