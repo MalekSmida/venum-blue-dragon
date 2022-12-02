@@ -1,10 +1,11 @@
 // node modules
 import Head from 'next/head';
-import { StoryblokComponent, useStoryblokState } from '@storyblok/react';
+// import { StoryblokComponent, useStoryblokState } from '@storyblok/react';
 
 // local files
 import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
 import { storyblokApi } from '../services/storyblok';
+import Page from './Page';
 
 export default function Home({ story }: any) {
   // A custom hook that connects the current story/page to the Storyblok Real Time Visual Editor
@@ -24,7 +25,8 @@ export default function Home({ story }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <StoryblokComponent blok={story.content} />
+      {/* <StoryblokComponent blok={story.content} /> */}
+      <Page />
     </div>
   );
 }
