@@ -10,21 +10,21 @@ import { Slider } from '../../layout';
 import { dataMedia } from './mocks';
 
 // typings
-import { IVideo } from '../../types/storyblok';
+import { SliderMonoBlockStoryblok } from '../../component-types-sb';
 
-function SliderMonoBlock({ blok }: any) {
+const SliderMonoBlock: React.FC<{ blok: SliderMonoBlockStoryblok }> = ({
+  blok,
+}) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
-
-  const video: IVideo = blok.video[0];
 
   return (
     <div className="relative" {...storyblokEditable(blok)}>
       <Slider hidePagination insideNavigation>
         <>
           <Video
-            sourceDesk={video.videoDesk.filename}
-            sourceMobile={video.videoMobile.filename}
+            sourceDesk={blok.video[0].videoDesk.filename}
+            sourceMobile={blok.video[0].videoMobile.filename}
           />
           <div
             className={cx(
@@ -34,16 +34,16 @@ function SliderMonoBlock({ blok }: any) {
               }
             )}
           >
-            <Title className="pb-5 pl-3 md:pb-11">{video.title}</Title>
+            <Title className="pb-5 pl-3 md:pb-11">{blok.video[0].title}</Title>
             <Button
               _id="TODO:delete"
-              title={video.buttonTitle}
-              link={video.buttonLink}
+              title={blok.video[0].buttonTitle}
+              link={blok.video[0].buttonLink.url}
             />
           </div>
         </>
 
-        {blok.images.map((_: any, idx: any) => (
+        {blok.images?.map((_, idx) => (
           <CardImageMedia
             key={idx}
             collection={dataMedia}
@@ -54,6 +54,6 @@ function SliderMonoBlock({ blok }: any) {
       </Slider>
     </div>
   );
-}
+};
 
 export default SliderMonoBlock;
