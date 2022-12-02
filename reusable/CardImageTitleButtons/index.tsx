@@ -10,7 +10,7 @@ import Description from '../Description';
 import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
 
-interface PropsCardPictureTitleButtons {
+interface PropsCardImageTitleButtons {
   collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
@@ -22,7 +22,7 @@ interface PropsCardPictureTitleButtons {
 /**
  * Post card component that is shown in home page
  */
-const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
+const CardImageTitleButtons: React.FC<PropsCardImageTitleButtons> = ({
   collection,
   width,
   height,
@@ -86,4 +86,4 @@ const CardPictureTitleButtons: React.FC<PropsCardPictureTitleButtons> = ({
   );
 };
 
-export default CardPictureTitleButtons;
+export default CardImageTitleButtons;

@@ -9,14 +9,14 @@ import { ICollection } from '../../types';
 import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
 
-export interface PropsCardPictureTitle {
+export interface PropsCardImageTitle {
   collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
   withPagination?: boolean;
 }
 
-const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
+const CardImageTitle: React.FC<PropsCardImageTitle> = ({
   collection,
   width,
   height,
@@ -59,4 +59,4 @@ const CardPictureTitle: React.FC<PropsCardPictureTitle> = ({
   );
 };
 
-export default CardPictureTitle;
+export default CardImageTitle;

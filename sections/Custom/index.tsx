@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 // local files
 import { Section, Slider } from '../../layout';
-import { CardPictureTitleButtons, MenuNav } from '../../reusable';
+import { CardImageTitleButtons, MenuNav } from '../../reusable';
 import { dataCustom, dataMenuCostum } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
 
@@ -18,7 +18,7 @@ function Categories() {
       {isMobileScreenSize ? (
         <Slider>
           {dataCustom.map((customCollection) => (
-            <CardPictureTitleButtons
+            <CardImageTitleButtons
               key={customCollection._id}
               collection={customCollection}
               width="w-full"
@@ -31,7 +31,7 @@ function Categories() {
         <>
           <MenuNav listMenu={dataMenuCostum} handleClick={() => {}} />
           <Slider>
-            <CardPictureTitleButtons
+            <CardImageTitleButtons
               collection={dataCustom[0]}
               width="w-full"
               height="h-c-700"

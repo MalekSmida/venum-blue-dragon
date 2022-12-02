@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 // local files
 import { Section, Slider } from '../../layout';
-import { CardPictureTitle, MenuNav, CardTitleBottom } from '../../reusable';
+import { CardImageTitle, MenuNav, CardTitleBottom } from '../../reusable';
 import { dataCategory, dataMenuCategory } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
 
@@ -45,7 +45,7 @@ function Categories() {
               />
             ))
           : dataCategory.map((collection) => (
-              <CardPictureTitle
+              <CardImageTitle
                 key={collection._id}
                 collection={collection}
                 width="w-full"

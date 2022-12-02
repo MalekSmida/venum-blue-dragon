@@ -9,13 +9,17 @@ import Button from '../Button';
 import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
 
-interface PropsCardMedia {
+interface PropsCardImageMedia {
   collection: ICollection;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
 }
 
-const CardMedia: React.FC<PropsCardMedia> = ({ collection, width, height }) => {
+const CardImageMedia: React.FC<PropsCardImageMedia> = ({
+  collection,
+  width,
+  height,
+}) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
@@ -49,4 +53,4 @@ const CardMedia: React.FC<PropsCardMedia> = ({ collection, width, height }) => {
   );
 };
 
-export default CardMedia;
+export default CardImageMedia;
