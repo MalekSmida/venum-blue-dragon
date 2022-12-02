@@ -74,7 +74,7 @@ const CardImageButtons: React.FC<PropsCardImageButtons> = ({
           </Description>
         )}
 
-        {blok.listButtons && (
+        {blok.buttonList && (
           <div
             className={cx('flex flex-wrap items-center pt-6', {
               'justify-center': isMobileScreenSize || isContentCenter,
