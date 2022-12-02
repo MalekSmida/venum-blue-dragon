@@ -44,7 +44,9 @@ function Categories() {
           />
           <Slider>
             <CardImageTitleButtons
-              collection={dataCustom[0]}
+              collection={
+                dataCustom.find((item) => item._id === selectedTabId)!
+              }
               width="w-full"
               height="h-c-700"
               hideTitle
