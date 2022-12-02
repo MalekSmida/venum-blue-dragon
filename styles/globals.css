@@ -25,10 +25,10 @@ html {
 }
 
 .swiper-pagination-bullet {
-  height: 3px !important;
+  height: 5px !important;
   width: 40px !important;
   border-radius: 25px !important;
-  margin: 0 3px !important;
+  padding: 3px !important;
   cursor: pointer;
 }
 
@@ -53,9 +53,7 @@ html {
   }
 
   .swiper-pagination-bullet {
-    height: 4px !important;
     width: 6.125rem !important;
-    margin: 0 3px !important;
   }
 }
 
