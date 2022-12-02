@@ -10,9 +10,7 @@
         "ImageDesk": {
           "type": "asset",
           "pos": 0,
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "required": true,
           "display_name": "Image Desk Source",
           "asset_folder_id": 198747
@@ -20,9 +18,7 @@
         "ImageMobile": {
           "type": "asset",
           "pos": 1,
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "asset_folder_id": 198748,
           "display_name": "Image Mobile Source",
           "required": true
@@ -72,14 +68,10 @@
         "body": {
           "type": "bloks",
           "restrict_components": true,
-          "component_whitelist": [
-            "SliderMonoBlock"
-          ],
+          "component_whitelist": ["SliderMonoBlock"],
           "display_name": "List of Blocks in Home page",
           "restrict_type": "groups",
-          "component_group_whitelist": [
-            "978ae24e-a13a-41b9-8944-dce3b3c92be9"
-          ]
+          "component_group_whitelist": ["978ae24e-a13a-41b9-8944-dce3b3c92be9"]
         }
       },
       "image": null,
@@ -104,9 +96,7 @@
         "video": {
           "type": "bloks",
           "restrict_components": true,
-          "component_whitelist": [
-            "Video"
-          ],
+          "component_whitelist": ["Video"],
           "maximum": "1",
           "required": true,
           "pos": 0
@@ -115,9 +105,7 @@
           "type": "bloks",
           "pos": 1,
           "restrict_components": true,
-          "component_whitelist": [
-            "CardImageMedia"
-          ],
+          "component_whitelist": ["CardImageMedia"],
           "maximum": "5"
         }
       },
@@ -145,18 +133,14 @@
           "type": "asset",
           "display_name": "Video Desk Source",
           "required": true,
-          "filetypes": [
-            "videos"
-          ],
+          "filetypes": ["videos"],
           "asset_folder_id": 198749,
           "pos": 0
         },
         "videoMobile": {
           "type": "asset",
           "display_name": "Video Mobile Source",
-          "filetypes": [
-            "videos"
-          ],
+          "filetypes": ["videos"],
           "required": true,
           "asset_folder_id": 198749,
           "pos": 1
