@@ -81,7 +81,11 @@ const CardImageButtons: React.FC<PropsCardImageButtons> = ({
             })}
           >
             {blok.buttonList.map((propsButton) => (
-              <Button key={propsButton._uid} blok={propsButton} />
+              <Button
+                key={propsButton._uid}
+                title={propsButton.title}
+                link={propsButton.link.url}
+              />
             ))}
           </div>
         )}
