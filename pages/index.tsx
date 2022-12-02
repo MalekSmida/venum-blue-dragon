@@ -5,7 +5,6 @@ import { StoryblokComponent, useStoryblokState } from '@storyblok/react';
 // local files
 import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
 import { storyblokApi } from '../services/storyblok';
-import StaticDesign from './StaticDesign';
 
 export default function Home({ story }: any) {
   // A custom hook that connects the current story/page to the Storyblok Real Time Visual Editor
@@ -26,8 +25,6 @@ export default function Home({ story }: any) {
       </Head>
 
       <StoryblokComponent blok={story.content} />
-
-      <StaticDesign />
     </div>
   );
 }

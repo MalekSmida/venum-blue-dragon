@@ -18,13 +18,16 @@ const SliderMonoBlock: React.FC<{ blok: SliderMonoBlockStoryblok }> = ({
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
+  const { videoDesk, videoMobile, title, buttonTitle, buttonLink } =
+    blok.video[0];
+
   return (
     <div className="relative" {...storyblokEditable(blok)}>
       <Slider hidePagination insideNavigation>
         <>
           <Video
-            sourceDesk={blok.video[0].videoDesk.filename}
-            sourceMobile={blok.video[0].videoMobile.filename}
+            sourceDesk={videoDesk.filename}
+            sourceMobile={videoMobile.filename}
           />
           <div
             className={cx(
@@ -34,19 +37,15 @@ const SliderMonoBlock: React.FC<{ blok: SliderMonoBlockStoryblok }> = ({
               }
             )}
           >
-            <Title className="pb-5 pl-3 md:pb-11">{blok.video[0].title}</Title>
-            <Button
-              _id="TODO:delete"
-              title={blok.video[0].buttonTitle}
-              link={blok.video[0].buttonLink.url}
-            />
+            <Title className="pb-5 pl-3 md:pb-11">{title}</Title>
+            <Button title={buttonTitle} link={buttonLink.url} />
           </div>
         </>
 
-        {blok.images?.map((_, idx) => (
+        {blok.images?.map((image) => (
           <CardImageMedia
-            key={idx}
-            collection={dataMedia}
+            {...image}
+            key={image._uid}
             width="w-full"
             height="h-screen"
           />

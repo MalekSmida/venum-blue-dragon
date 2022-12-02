@@ -4,19 +4,22 @@ import cx from 'classnames';
 import { useSelector } from 'react-redux';
 
 // local files
-import { ICollection } from '../../types';
 import Button from '../Button';
 import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
+import { CardImageMediaStoryblok } from '../../component-types-sb';
 
-interface PropsCardImageMedia {
-  collection: ICollection;
+interface PropsCardImageMedia extends CardImageMediaStoryblok {
   width: string; // Tailwind width class
   height: string; // Tailwind height class
 }
 
 const CardImageMedia: React.FC<PropsCardImageMedia> = ({
-  collection,
+  imageDesk,
+  imageMobile,
+  title,
+  buttonlink,
+  buttonTitle,
   width,
   height,
 }) => {
@@ -27,10 +30,8 @@ const CardImageMedia: React.FC<PropsCardImageMedia> = ({
     <div className={cx('relative mx-0.5', width, height)}>
       <div className="relative h-full w-full">
         <Image
-          src={
-            isMobileScreenSize ? collection.imageMobile : collection.imageDesk
-          }
-          alt={collection.title}
+          src={isMobileScreenSize ? imageMobile.filename : imageDesk.filename}
+          alt={title}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
@@ -46,8 +47,8 @@ const CardImageMedia: React.FC<PropsCardImageMedia> = ({
           }
         )}
       >
-        <Title className="pb-5 pl-3 md:pb-11">{collection.title}</Title>
-        <Button _id="" title="Découvrir" link="/home" />
+        <Title className="pb-5 pl-3 md:pb-11">{buttonTitle}</Title>
+        <Button title="Découvrir" link={buttonlink} />
       </div>
     </div>
   );

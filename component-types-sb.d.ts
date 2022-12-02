@@ -1,4 +1,4 @@
-import { StoryblokStory } from 'storyblok-generate-ts';
+import {StoryblokStory} from 'storyblok-generate-ts'
 
 export interface AssetStoryblok {
   alt?: string;
@@ -21,37 +21,38 @@ export type MultilinkStoryblok =
       id?: string;
       cached_url?: string;
       anchor?: string;
-      linktype?: 'story';
+      linktype?: "story";
       [k: string]: any;
     }
   | {
       url?: string;
       cached_url?: string;
       anchor?: string;
-      linktype?: 'asset' | 'url';
+      linktype?: "asset" | "url";
       [k: string]: any;
     }
   | {
       email?: string;
-      linktype?: 'email';
+      linktype?: "email";
       [k: string]: any;
     };
 
 export interface CardImageMediaStoryblok {
-  ImageDesk: AssetStoryblok;
-  ImageMobile: AssetStoryblok;
-  Title?: string;
-  ButtonTitle: string;
-  ButtonLink: MultilinkStoryblok;
+  imageDesk: AssetStoryblok;
+  imageMobile: AssetStoryblok;
+  title: string;
+  description?: string;
+  buttonTitle: string;
+  buttonLink: MultilinkStoryblok;
   _uid: string;
-  component: 'CardImageMedia';
+  component: "CardImageMedia";
   [k: string]: any;
 }
 
 export interface PageStoryblok {
   body?: SliderMonoBlockStoryblok[];
   _uid: string;
-  component: 'Page';
+  component: "Page";
   [k: string]: any;
 }
 
@@ -59,7 +60,7 @@ export interface SliderMonoBlockStoryblok {
   video: VideoStoryblok[];
   images?: CardImageMediaStoryblok[];
   _uid: string;
-  component: 'SliderMonoBlock';
+  component: "SliderMonoBlock";
   [k: string]: any;
 }
 
@@ -70,6 +71,6 @@ export interface VideoStoryblok {
   buttonTitle: string;
   buttonLink: MultilinkStoryblok;
   _uid: string;
-  component: 'Video';
+  component: "Video";
   [k: string]: any;
 }

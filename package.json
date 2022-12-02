@@ -10,7 +10,9 @@
     "test:watch": "jest --watchAll",
     "lint": "next lint",
     "format": "prettier --write --ignore-path .gitignore .",
-    "generate-sb-types": "storyblok-generate-ts source=./components.184925.json target=./component-types-sb"
+    "pull-sb-components": "storyblok pull-components --space=184925",
+    "generate-sb-types": "storyblok-generate-ts source=./components.184925.json target=./component-types-sb",
+    "generate": "npm run pull-sb-components && npm run generate-sb-types"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",

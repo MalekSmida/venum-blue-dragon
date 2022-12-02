@@ -4,45 +4,46 @@
       "name": "CardImageMedia",
       "display_name": "Image",
       "created_at": "2022-12-01T15:22:47.253Z",
-      "updated_at": "2022-12-01T15:37:01.857Z",
+      "updated_at": "2022-12-02T16:08:36.376Z",
       "id": 3185803,
       "schema": {
-        "ImageDesk": {
+        "imageDesk": {
           "type": "asset",
-          "pos": 0,
-          "filetypes": ["images"],
-          "required": true,
+          "filetypes": [
+            "images"
+          ],
+          "asset_folder_id": 198747,
           "display_name": "Image Desk Source",
-          "asset_folder_id": 198747
+          "required": true
         },
-        "ImageMobile": {
+        "imageMobile": {
           "type": "asset",
-          "pos": 1,
-          "filetypes": ["images"],
+          "filetypes": [
+            "images"
+          ],
           "asset_folder_id": 198748,
           "display_name": "Image Mobile Source",
           "required": true
         },
-        "Title": {
+        "title": {
           "type": "text",
-          "pos": 2,
           "max_length": "45",
-          "required": false,
-          "display_name": "Title"
+          "required": true,
+          "display_name": ""
         },
-        "ButtonTitle": {
+        "description": {
           "type": "text",
-          "pos": 3,
+          "max_length": "200"
+        },
+        "buttonTitle": {
+          "type": "text",
           "max_length": "20",
-          "description": "",
-          "display_name": "Button Title",
+          "display_name": "",
           "required": true
         },
-        "ButtonLink": {
+        "buttonLink": {
           "type": "multilink",
-          "pos": 4,
-          "required": true,
-          "display_name": "Button Link"
+          "required": true
         }
       },
       "image": null,
@@ -68,10 +69,14 @@
         "body": {
           "type": "bloks",
           "restrict_components": true,
-          "component_whitelist": ["SliderMonoBlock"],
+          "component_whitelist": [
+            "SliderMonoBlock"
+          ],
           "display_name": "List of Blocks in Home page",
           "restrict_type": "groups",
-          "component_group_whitelist": ["978ae24e-a13a-41b9-8944-dce3b3c92be9"]
+          "component_group_whitelist": [
+            "978ae24e-a13a-41b9-8944-dce3b3c92be9"
+          ]
         }
       },
       "image": null,
@@ -96,7 +101,9 @@
         "video": {
           "type": "bloks",
           "restrict_components": true,
-          "component_whitelist": ["Video"],
+          "component_whitelist": [
+            "Video"
+          ],
           "maximum": "1",
           "required": true,
           "pos": 0
@@ -105,7 +112,9 @@
           "type": "bloks",
           "pos": 1,
           "restrict_components": true,
-          "component_whitelist": ["CardImageMedia"],
+          "component_whitelist": [
+            "CardImageMedia"
+          ],
           "maximum": "5"
         }
       },
@@ -133,14 +142,18 @@
           "type": "asset",
           "display_name": "Video Desk Source",
           "required": true,
-          "filetypes": ["videos"],
+          "filetypes": [
+            "videos"
+          ],
           "asset_folder_id": 198749,
           "pos": 0
         },
         "videoMobile": {
           "type": "asset",
           "display_name": "Video Mobile Source",
-          "filetypes": ["videos"],
+          "filetypes": [
+            "videos"
+          ],
           "required": true,
           "asset_folder_id": 198749,
           "pos": 1

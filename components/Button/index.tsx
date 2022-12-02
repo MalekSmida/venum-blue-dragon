@@ -2,9 +2,12 @@
 import Link from 'next/link';
 
 // local files
-import { IButtonLink } from '../../types';
+interface IButton {
+  title: string;
+  link: string;
+}
 
-const Button: React.FC<IButtonLink> = ({ title, link = '' }) => {
+const Button: React.FC<IButton> = ({ title, link = '' }) => {
   return (
     // <Link href={link}>
     <div className="group	relative m-0.5 inline-block h-c-53 w-44 -skew-x-c-20 cursor-pointer border border-white px-4 py-2 focus:outline-none">
