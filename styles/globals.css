@@ -25,10 +25,8 @@ html {
 }
 
 .swiper-pagination-bullet {
-  height: 5px !important;
   width: 40px !important;
   border-radius: 25px !important;
-  margin: 0 3px !important;
   cursor: pointer;
 }
 
