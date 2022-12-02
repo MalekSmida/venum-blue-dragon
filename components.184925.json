@@ -1,0 +1,194 @@
+{
+  "components": [
+    {
+      "name": "CardImageMedia",
+      "display_name": "Image",
+      "created_at": "2022-12-01T15:22:47.253Z",
+      "updated_at": "2022-12-01T15:37:01.857Z",
+      "id": 3185803,
+      "schema": {
+        "ImageDesk": {
+          "type": "asset",
+          "pos": 0,
+          "filetypes": [
+            "images"
+          ],
+          "required": true,
+          "display_name": "Image Desk Source",
+          "asset_folder_id": 198747
+        },
+        "ImageMobile": {
+          "type": "asset",
+          "pos": 1,
+          "filetypes": [
+            "images"
+          ],
+          "asset_folder_id": 198748,
+          "display_name": "Image Mobile Source",
+          "required": true
+        },
+        "Title": {
+          "type": "text",
+          "pos": 2,
+          "max_length": "45",
+          "required": false,
+          "display_name": "Title"
+        },
+        "ButtonTitle": {
+          "type": "text",
+          "pos": 3,
+          "max_length": "20",
+          "description": "",
+          "display_name": "Button Title",
+          "required": true
+        },
+        "ButtonLink": {
+          "type": "multilink",
+          "pos": 4,
+          "required": true,
+          "display_name": "Button Link"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Image",
+      "component_group_uuid": "2c93135c-84c8-4325-beaa-c407d503f07a",
+      "color": null,
+      "icon": null,
+      "component_group_name": "components"
+    },
+    {
+      "name": "Page",
+      "display_name": "",
+      "created_at": "2022-12-01T15:38:58.181Z",
+      "updated_at": "2022-12-02T10:45:12.586Z",
+      "id": 3185849,
+      "schema": {
+        "body": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "SliderMonoBlock"
+          ],
+          "display_name": "List of Blocks in Home page",
+          "restrict_type": "groups",
+          "component_group_whitelist": [
+            "978ae24e-a13a-41b9-8944-dce3b3c92be9"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Page",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
+      "name": "SliderMonoBlock",
+      "display_name": "Slider Mono Block",
+      "created_at": "2022-12-01T15:16:17.109Z",
+      "updated_at": "2022-12-02T11:04:24.924Z",
+      "id": 3185762,
+      "schema": {
+        "video": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Video"
+          ],
+          "maximum": "1",
+          "required": true,
+          "pos": 0
+        },
+        "images": {
+          "type": "bloks",
+          "pos": 1,
+          "restrict_components": true,
+          "component_whitelist": [
+            "CardImageMedia"
+          ],
+          "maximum": "5"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Slider Mono Block",
+      "component_group_uuid": "978ae24e-a13a-41b9-8944-dce3b3c92be9",
+      "color": null,
+      "icon": null,
+      "component_group_name": "blocks"
+    },
+    {
+      "name": "Video",
+      "display_name": "Video",
+      "created_at": "2022-12-01T15:02:54.311Z",
+      "updated_at": "2022-12-02T11:07:40.858Z",
+      "id": 3185727,
+      "schema": {
+        "videoDesk": {
+          "type": "asset",
+          "display_name": "Video Desk Source",
+          "required": true,
+          "filetypes": [
+            "videos"
+          ],
+          "asset_folder_id": 198749,
+          "pos": 0
+        },
+        "videoMobile": {
+          "type": "asset",
+          "display_name": "Video Mobile Source",
+          "filetypes": [
+            "videos"
+          ],
+          "required": true,
+          "asset_folder_id": 198749,
+          "pos": 1
+        },
+        "title": {
+          "type": "text",
+          "max_length": "45",
+          "required": true
+        },
+        "buttonTitle": {
+          "type": "text",
+          "max_length": "20",
+          "required": true
+        },
+        "buttonLink": {
+          "type": "multilink",
+          "max_length": "",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": "",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Video",
+      "component_group_uuid": "2c93135c-84c8-4325-beaa-c407d503f07a",
+      "color": null,
+      "icon": null,
+      "component_group_name": "components"
+    }
+  ]
+}

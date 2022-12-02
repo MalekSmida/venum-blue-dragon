@@ -1,9 +1,10 @@
 // node module
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // local files
 import { Section, Slider } from '../../layout';
-import { CardPictureTitle, MenuNav, CardTitleBottom } from '../../components';
+import { CardImageTitle, TabMenu, CardTitleBottom } from '../../components';
 import { dataCategory, dataMenuCategory } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
 
@@ -11,9 +12,20 @@ function Categories() {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
+  // state
+  const [selectedTabId, setSelectedTabId] = useState('0');
+
+  const handleSelectTab = (tabId: string) => {
+    setSelectedTabId(tabId);
+  };
+
   return (
     <Section title="Découvrir nos catégories">
-      <MenuNav listMenu={dataMenuCategory} handleClick={() => {}} />
+      <TabMenu
+        listMenu={dataMenuCategory}
+        handleClick={handleSelectTab}
+        selectedTabId={selectedTabId}
+      />
       <Slider
         breakpoints={{
           1: {
@@ -45,7 +57,7 @@ function Categories() {
               />
             ))
           : dataCategory.map((collection) => (
-              <CardPictureTitle
+              <CardImageTitle
                 key={collection._id}
                 collection={collection}
                 width="w-full"

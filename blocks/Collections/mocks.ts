@@ -43,7 +43,7 @@ export const dataCollection: Array<ICollection> = [
       'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802300/Venum/Mobile/Groupe_de_masques_97_mhbxd0.jpg',
     imageDesk:
       'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802128/Venum/Groupe_de_masques_93_plos8f.jpg',
-    title: 'Title 5',
+    title: 'Jackets',
     link: '',
   },
   {
@@ -52,7 +52,7 @@ export const dataCollection: Array<ICollection> = [
       'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802300/Venum/Mobile/Groupe_de_masques_98_jawtlv.jpg',
     imageDesk:
       'https://res.cloudinary.com/deebb8zh7/image/upload/v1669802128/Venum/Groupe_de_masques_94_firhkj.jpg',
-    title: 'Title6',
+    title: 'Tights',
     link: '',
   },
 ];

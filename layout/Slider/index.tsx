@@ -45,6 +45,7 @@ const Slider: React.FC<PropsSlider> = ({
           autoplay={{
             delay: 5000,
           }}
+          rewind
           slidesPerView={1}
           navigation={{
             prevEl,
