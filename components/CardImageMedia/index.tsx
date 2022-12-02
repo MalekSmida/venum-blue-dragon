@@ -9,17 +9,14 @@ import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
 import { CardImageMediaStoryblok } from '../../component-types-sb';
 
-interface PropsCardImageMedia extends CardImageMediaStoryblok {
+interface PropsCardImageMedia {
+  blok: CardImageMediaStoryblok;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
 }
 
 const CardImageMedia: React.FC<PropsCardImageMedia> = ({
-  imageDesk,
-  imageMobile,
-  title,
-  buttonlink,
-  buttonTitle,
+  blok,
   width,
   height,
 }) => {
@@ -30,8 +27,12 @@ const CardImageMedia: React.FC<PropsCardImageMedia> = ({
     <div className={cx('relative mx-0.5', width, height)}>
       <div className="relative h-full w-full">
         <Image
-          src={isMobileScreenSize ? imageMobile.filename : imageDesk.filename}
-          alt={title}
+          src={
+            isMobileScreenSize
+              ? blok.imageMobile.filename
+              : blok.imageDesk.filename
+          }
+          alt={blok.title}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
@@ -47,8 +48,8 @@ const CardImageMedia: React.FC<PropsCardImageMedia> = ({
           }
         )}
       >
-        <Title className="pb-5 pl-3 md:pb-11">{buttonTitle}</Title>
-        <Button title="Découvrir" link={buttonlink} />
+        <Title className="pb-5 pl-3 md:pb-11">{blok.buttonTitle}</Title>
+        <Button title="Découvrir" link={blok.buttonlink} />
       </div>
     </div>
   );

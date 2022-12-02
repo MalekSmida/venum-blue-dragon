@@ -7,7 +7,6 @@ import { storyblokEditable } from '@storyblok/react';
 import { selectApp } from '../../redux/slices/appSlice';
 import { Video, Button, Title, CardImageMedia } from '../../components';
 import { Slider } from '../../layout';
-import { dataMedia } from './mocks';
 
 // typings
 import { SliderMonoBlockStoryblok } from '../../component-types-sb';
@@ -20,6 +19,8 @@ const SliderMonoBlock: React.FC<{ blok: SliderMonoBlockStoryblok }> = ({
 
   const { videoDesk, videoMobile, title, buttonTitle, buttonLink } =
     blok.video[0];
+
+  console.log(blok.images);
 
   return (
     <div className="relative" {...storyblokEditable(blok)}>
@@ -42,14 +43,14 @@ const SliderMonoBlock: React.FC<{ blok: SliderMonoBlockStoryblok }> = ({
           </div>
         </>
 
-        {blok.images?.map((image) => (
+        {/* {blok.images?.map((image) => (
           <CardImageMedia
             {...image}
             key={image._uid}
             width="w-full"
             height="h-screen"
           />
-        ))}
+        ))} */}
       </Slider>
     </div>
   );
