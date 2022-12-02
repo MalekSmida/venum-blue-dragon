@@ -16,6 +16,7 @@ import { selectApp } from '../redux/slices/appSlice';
 const Page = ({ blok }: any) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
+
   return (
     <main {...storyblokEditable(blok)}>
       {blok.body.map((nestedBlok: any) => (
