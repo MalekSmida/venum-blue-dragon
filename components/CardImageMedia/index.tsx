@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import cx from 'classnames';
 import { useSelector } from 'react-redux';
+import { storyblokEditable } from '@storyblok/react';
 
 // local files
 import Button from '../Button';
@@ -24,7 +25,10 @@ const CardImageMedia: React.FC<PropsCardImageMedia> = ({
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <div className={cx('relative mx-0.5', width, height)}>
+    <div
+      className={cx('relative mx-0.5', width, height)}
+      {...storyblokEditable(blok)}
+    >
       <div className="relative h-full w-full">
         <Image
           src={

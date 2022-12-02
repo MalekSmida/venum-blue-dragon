@@ -43,14 +43,14 @@ const SliderMonoBlock: React.FC<{ blok: SliderMonoBlockStoryblok }> = ({
           </div>
         </>
 
-        {/* {blok.images?.map((image) => (
+        {blok.images?.map((image) => (
           <CardImageMedia
-            {...image}
             key={image._uid}
+            blok={image}
             width="w-full"
             height="h-screen"
           />
-        ))} */}
+        ))}
       </Slider>
     </div>
   );
