@@ -4,7 +4,7 @@
       "name": "CardImageMedia",
       "display_name": "Image",
       "created_at": "2022-12-01T15:22:47.253Z",
-      "updated_at": "2022-12-02T16:08:36.376Z",
+      "updated_at": "2022-12-02T16:09:08.492Z",
       "id": 3185803,
       "schema": {
         "imageDesk": {
@@ -31,10 +31,6 @@
           "required": true,
           "display_name": ""
         },
-        "description": {
-          "type": "text",
-          "max_length": "200"
-        },
         "buttonTitle": {
           "type": "text",
           "max_length": "20",
@@ -54,6 +50,54 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "Image",
+      "component_group_uuid": "2c93135c-84c8-4325-beaa-c407d503f07a",
+      "color": null,
+      "icon": null,
+      "component_group_name": "components"
+    },
+    {
+      "name": "CardImageTitle",
+      "display_name": "Card Image Title Clickable",
+      "created_at": "2022-12-02T16:36:53.961Z",
+      "updated_at": "2022-12-02T16:41:48.189Z",
+      "id": 3189510,
+      "schema": {
+        "imageDesk": {
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "required": true,
+          "asset_folder_id": 198747,
+          "display_name": "Image Desk Source"
+        },
+        "imageMobile": {
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "required": true,
+          "asset_folder_id": 198748,
+          "display_name": "Image Mobile Source"
+        },
+        "title": {
+          "type": "text",
+          "max_length": "45",
+          "required": true
+        },
+        "link": {
+          "type": "multilink",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": "",
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Card Image Title Clickable",
       "component_group_uuid": "2c93135c-84c8-4325-beaa-c407d503f07a",
       "color": null,
       "icon": null,
@@ -90,6 +134,42 @@
       "component_group_uuid": null,
       "color": null,
       "icon": null
+    },
+    {
+      "name": "SliderFourBlocks",
+      "display_name": "Slider Four Blocks",
+      "created_at": "2022-12-02T16:34:31.140Z",
+      "updated_at": "2022-12-02T16:44:25.244Z",
+      "id": 3189508,
+      "schema": {
+        "title": {
+          "type": "text",
+          "max_length": "45",
+          "required": true
+        },
+        "cardList": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "CardImageTitle"
+          ],
+          "restrict_type": "",
+          "required": true,
+          "maximum": "6"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Slider Four Blocks",
+      "component_group_uuid": "978ae24e-a13a-41b9-8944-dce3b3c92be9",
+      "color": null,
+      "icon": null,
+      "component_group_name": "blocks"
     },
     {
       "name": "SliderMonoBlock",

@@ -41,7 +41,6 @@ export interface CardImageMediaStoryblok {
   imageDesk: AssetStoryblok;
   imageMobile: AssetStoryblok;
   title: string;
-  description?: string;
   buttonTitle: string;
   buttonLink: MultilinkStoryblok;
   _uid: string;
@@ -49,10 +48,28 @@ export interface CardImageMediaStoryblok {
   [k: string]: any;
 }
 
+export interface CardImageTitleStoryblok {
+  imageDesk: AssetStoryblok;
+  imageMobile: AssetStoryblok;
+  title: string;
+  link: MultilinkStoryblok;
+  _uid: string;
+  component: "CardImageTitle";
+  [k: string]: any;
+}
+
 export interface PageStoryblok {
-  body?: SliderMonoBlockStoryblok[];
+  body?: (SliderFourBlocksStoryblok | SliderMonoBlockStoryblok)[];
   _uid: string;
   component: "Page";
+  [k: string]: any;
+}
+
+export interface SliderFourBlocksStoryblok {
+  title: string;
+  cardList: CardImageTitleStoryblok[];
+  _uid: string;
+  component: "SliderFourBlocks";
   [k: string]: any;
 }
 

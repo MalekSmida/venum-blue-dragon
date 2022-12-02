@@ -1,11 +1,18 @@
+// node modules
+import { storyblokEditable } from '@storyblok/react';
+
 // local files
 import { CardImageTitle } from '../../components';
 import { Section, Slider } from '../../layout';
-import { dataCollection } from './mocks';
 
-function Collections() {
+// typings
+import { SliderFourBlocksStoryblok } from '../../component-types-sb';
+
+const SliderFourBlocks: React.FC<{ blok: SliderFourBlocksStoryblok }> = ({
+  blok,
+}) => {
   return (
-    <Section title="Découvrir nos collections">
+    <Section title="Découvrir nos collections" {...storyblokEditable(blok)}>
       <Slider
         breakpoints={{
           480: {
@@ -22,10 +29,10 @@ function Collections() {
           },
         }}
       >
-        {dataCollection.map((collection) => (
+        {blok.cardList.map((card) => (
           <CardImageTitle
-            key={collection._id}
-            collection={collection}
+            key={card._uid}
+            blok={card}
             width="w-full"
             height="h-c-665"
             withPagination
@@ -34,6 +41,6 @@ function Collections() {
       </Slider>
     </Section>
   );
-}
+};
 
-export default Collections;
+export default SliderFourBlocks;
