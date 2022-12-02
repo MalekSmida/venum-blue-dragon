@@ -1,26 +1,29 @@
 // node module
 import { useSelector } from 'react-redux';
 import cx from 'classnames';
+import { storyblokEditable } from '@storyblok/react';
 
 // local files
 import { CardImageButtons } from '../../components';
 import { Section, Slider } from '../../layout';
-import { dataGender } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
+import { StaticTwoBlocksStoryblok } from '../../component-types-sb';
 
-function Gender() {
+const StaticTwoBlocks: React.FC<{ blok: StaticTwoBlocksStoryblok }> = ({
+  blok,
+}) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <Section>
+    <Section {...storyblokEditable(blok)}>
       <div className={cx('w-full', { 'flex flex-row': !isMobileScreenSize })}>
         {isMobileScreenSize ? (
           <Slider>
-            {dataGender.map((gender) => (
+            {blok.blockList.map((card) => (
               <CardImageButtons
-                key={gender._id}
-                collection={gender}
+                key={card._uid}
+                blok={card}
                 width="w-full"
                 height="h-c-800"
                 isContentCenter
@@ -29,10 +32,10 @@ function Gender() {
             ))}
           </Slider>
         ) : (
-          dataGender.map((gender) => (
+          blok.blockList.map((card) => (
             <CardImageButtons
-              key={gender._id}
-              collection={gender}
+              key={card._uid}
+              blok={card}
               width="w-full lg:w-1/2"
               height="h-c-800"
               isContentCenter
@@ -42,6 +45,6 @@ function Gender() {
       </div>
     </Section>
   );
-}
+};
 
-export default Gender;
+export default StaticTwoBlocks;

@@ -2,16 +2,17 @@
 import Image from 'next/image';
 import cx from 'classnames';
 import { useSelector } from 'react-redux';
+import { storyblokEditable } from '@storyblok/react';
 
 // local files
-import { ICollection } from '../../types';
 import Button from '../Button';
 import Description from '../Description';
 import Title from '../Title';
 import { selectApp } from '../../redux/slices/appSlice';
+import { CardImageButtonsStoryblok } from '../../component-types-sb';
 
 interface PropsCardImageButtons {
-  collection: ICollection;
+  blok: CardImageButtonsStoryblok;
   width: string; // Tailwind width class
   height: string; // Tailwind height class
   isContentCenter?: boolean;
@@ -23,7 +24,7 @@ interface PropsCardImageButtons {
  * Post card component that is shown in home page
  */
 const CardImageButtons: React.FC<PropsCardImageButtons> = ({
-  collection,
+  blok,
   width,
   height,
   isContentCenter = false,
@@ -40,13 +41,16 @@ const CardImageButtons: React.FC<PropsCardImageButtons> = ({
         width,
         isMobileScreenSize ? 'h-c-575' : height // default height of cards in mobile screens
       )}
+      {...storyblokEditable(blok)}
     >
       <div className="relative h-full w-full">
         <Image
           src={
-            isMobileScreenSize ? collection.imageMobile : collection.imageDesk
+            isMobileScreenSize
+              ? blok.imageMobile.filename
+              : blok.imageDesk.filename
           }
-          alt={collection.title}
+          alt={blok.title}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
@@ -62,22 +66,22 @@ const CardImageButtons: React.FC<PropsCardImageButtons> = ({
           { 'bottom-20': withPagination && isMobileScreenSize }
         )}
       >
-        {collection.title && !hideTitle && <Title>{collection.title}</Title>}
+        {blok.title && !hideTitle && <Title>{blok.title}</Title>}
 
-        {collection.description && (
+        {blok.description && (
           <Description className="max-w-md py-4 opacity-80 md:py-5">
-            {collection.description}
+            {blok.description}
           </Description>
         )}
 
-        {collection.listButtons && (
+        {blok.listButtons && (
           <div
             className={cx('flex flex-wrap items-center pt-6', {
               'justify-center': isMobileScreenSize || isContentCenter,
             })}
           >
-            {collection.listButtons.map((propsButton) => (
-              <Button key={propsButton._id} {...propsButton} />
+            {blok.buttonList.map((propsButton) => (
+              <Button key={propsButton._uid} blok={propsButton} />
             ))}
           </div>
         )}

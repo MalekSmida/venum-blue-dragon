@@ -1,16 +1,5 @@
 import {StoryblokStory} from 'storyblok-generate-ts'
 
-export interface AssetStoryblok {
-  alt?: string;
-  copyright?: string;
-  id: number;
-  filename: string;
-  name: string;
-  title?: string;
-  focus?: string;
-  [k: string]: any;
-}
-
 export type MultilinkStoryblok =
   | {
       cached_url?: string;
@@ -37,6 +26,36 @@ export type MultilinkStoryblok =
       [k: string]: any;
     };
 
+export interface ButtonStoryblok {
+  title: string;
+  link: MultilinkStoryblok;
+  _uid: string;
+  component: "Button";
+  [k: string]: any;
+}
+
+export interface AssetStoryblok {
+  alt?: string;
+  copyright?: string;
+  id: number;
+  filename: string;
+  name: string;
+  title?: string;
+  focus?: string;
+  [k: string]: any;
+}
+
+export interface CardImageButtonsStoryblok {
+  imageDesk: AssetStoryblok;
+  imageMobile: AssetStoryblok;
+  title?: string;
+  description?: string;
+  buttonList: ButtonStoryblok[];
+  _uid: string;
+  component: "CardImageButtons";
+  [k: string]: any;
+}
+
 export interface CardImageMediaStoryblok {
   imageDesk: AssetStoryblok;
   imageMobile: AssetStoryblok;
@@ -59,7 +78,7 @@ export interface CardImageTitleStoryblok {
 }
 
 export interface PageStoryblok {
-  body?: (SliderFourBlocksStoryblok | SliderMonoBlockStoryblok)[];
+  body?: (SliderFourBlocksStoryblok | SliderMonoBlockStoryblok | StaticTwoBlocksStoryblok)[];
   _uid: string;
   component: "Page";
   [k: string]: any;
@@ -78,6 +97,13 @@ export interface SliderMonoBlockStoryblok {
   images?: CardImageMediaStoryblok[];
   _uid: string;
   component: "SliderMonoBlock";
+  [k: string]: any;
+}
+
+export interface StaticTwoBlocksStoryblok {
+  blockList: CardImageButtonsStoryblok[];
+  _uid: string;
+  component: "StaticTwoBlocks";
   [k: string]: any;
 }
 

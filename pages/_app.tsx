@@ -9,7 +9,7 @@ import { store } from '../redux/store';
 
 // blocks
 import Page from './Page';
-import { SliderMonoBlock, SliderFourBlocks } from '../blocks';
+import { SliderMonoBlock, SliderFourBlocks, StaticTwoBlocks } from '../blocks';
 
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN || '4o7gexN6wUikLWMuiYSXLAtt', // FIXME: key is not detected from env
@@ -20,6 +20,7 @@ storyblokInit({
     Page,
     SliderMonoBlock,
     SliderFourBlocks,
+    StaticTwoBlocks,
   },
 });
 
