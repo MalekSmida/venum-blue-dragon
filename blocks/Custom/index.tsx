@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 // local files
 import { Section, Slider } from '../../layout';
-import { CardImageTitleButtons, TabMenu } from '../../components';
+import { CardImageButtons, TabMenu } from '../../components';
 import { dataCustom, dataMenuCostum } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
 
@@ -26,7 +26,7 @@ function Categories() {
       {isMobileScreenSize ? (
         <Slider>
           {dataCustom.map((customCollection) => (
-            <CardImageTitleButtons
+            <CardImageButtons
               key={customCollection._id}
               collection={customCollection}
               width="w-full"
@@ -43,7 +43,7 @@ function Categories() {
             selectedTabId={selectedTabId}
           />
           <Slider>
-            <CardImageTitleButtons
+            <CardImageButtons
               collection={
                 dataCustom.find((item) => item._id === selectedTabId)!
               }
