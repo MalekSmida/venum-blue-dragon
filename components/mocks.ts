@@ -1,4 +1,4 @@
-import { ICollection } from '../../types';
+import { ICollection } from '../types';
 
 export const dataMedia: ICollection = {
   _id: '0',

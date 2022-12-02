@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import cx from 'classnames';
 
 // local files
-import { selectApp } from '../../redux/slices/appSlice';
-import { Video, Button, Title, CardImageMedia } from '../../components';
-import { Slider } from '../../layout';
+import { selectApp } from '../redux/slices/appSlice';
+import { Video, Button, Title, CardImageMedia } from '../reusable';
+import { Slider } from '../layout';
 import { dataMedia } from './mocks';
 
 /**

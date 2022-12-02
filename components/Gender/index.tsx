@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import cx from 'classnames';
 
 // local files
-import { CardImageTitleButtons } from '../../components';
+import { CardImageTitleButtons } from '../../reusable';
 import { Section, Slider } from '../../layout';
 import { dataGender } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';

@@ -1,24 +1,14 @@
 // node modules
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
+import { StoryblokComponent, useStoryblokState } from '@storyblok/react';
 
 // local files
-import {
-  Collections,
-  Gender,
-  SliderMonoBlock,
-  Categories,
-  Products,
-  Custom,
-} from '../blocks';
 import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
-import { selectApp } from '../redux/slices/appSlice';
 import { storyblokApi } from '../services/storyblok';
 
 export default function Home({ story }: any) {
-  console.log(story);
-  // redux
-  const { isMobileScreenSize } = useSelector(selectApp);
+  // A custom hook that connects the current story/page to the Storyblok Real Time Visual Editor
+  // story = useStoryblokState(story);
 
   // hooks
   useDetectMobileScreenSize();
@@ -34,15 +24,7 @@ export default function Home({ story }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <SliderMonoBlock />
-        {isMobileScreenSize && <Categories />}
-        <Collections />
-        <Gender />
-        {!isMobileScreenSize && <Categories />}
-        <Products />
-        <Custom />
-      </main>
+      <StoryblokComponent blok={story.content} />
     </div>
   );
 }
@@ -56,6 +38,7 @@ export async function getStaticProps() {
     version: 'draft', // or 'published'
   };
 
+  // fetch stories from storyblok
   const { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
   return {
@@ -63,6 +46,7 @@ export async function getStaticProps() {
       story: data ? data.story : false,
       key: data ? data.story.id : false,
     },
-    revalidate: 3600, // revalidate every hour
+    // revalidate: 3600, // revalidate every hour
+    revalidate: 36,
   };
 }
