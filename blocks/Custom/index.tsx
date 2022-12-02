@@ -1,15 +1,23 @@
 // node module
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // local files
 import { Section, Slider } from '../../layout';
-import { CardImageTitleButtons, MenuNav } from '../../components';
+import { CardImageTitleButtons, TabMenu } from '../../components';
 import { dataCustom, dataMenuCostum } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
 
 function Categories() {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
+
+  // state
+  const [selectedTabId, setSelectedTabId] = useState('0');
+
+  const handleSelectTab = (tabId: string) => {
+    setSelectedTabId(tabId);
+  };
 
   return (
     <Section
@@ -29,7 +37,11 @@ function Categories() {
         </Slider>
       ) : (
         <>
-          <MenuNav listMenu={dataMenuCostum} handleClick={() => {}} />
+          <TabMenu
+            listMenu={dataMenuCostum}
+            handleClick={handleSelectTab}
+            selectedTabId={selectedTabId}
+          />
           <Slider>
             <CardImageTitleButtons
               collection={dataCustom[0]}

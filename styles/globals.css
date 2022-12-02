@@ -28,7 +28,7 @@ html {
   height: 5px !important;
   width: 40px !important;
   border-radius: 25px !important;
-  padding: 3px !important;
+  margin: 0 3px !important;
   cursor: pointer;
 }
 
