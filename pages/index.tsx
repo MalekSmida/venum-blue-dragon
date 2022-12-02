@@ -1,14 +1,27 @@
 // node modules
 import Head from 'next/head';
 import { StoryblokComponent, useStoryblokState } from '@storyblok/react';
+import { useSelector } from 'react-redux';
 
 // local files
 import useDetectMobileScreenSize from '../hooks/useDetectMobileScreenSize';
 import { storyblokApi } from '../services/storyblok';
+import {
+  Categories,
+  Collections,
+  Custom,
+  Gender,
+  Media,
+  Products,
+} from '../sections';
+import { selectApp } from '../redux/slices/appSlice';
 
 export default function Home({ story }: any) {
   // A custom hook that connects the current story/page to the Storyblok Real Time Visual Editor
   // story = useStoryblokState(story);
+
+  // redux
+  const { isMobileScreenSize } = useSelector(selectApp);
 
   // hooks
   useDetectMobileScreenSize();
@@ -24,7 +37,17 @@ export default function Home({ story }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <StoryblokComponent blok={story.content} />
+      {/* <StoryblokComponent blok={story.content} /> */}
+
+      <main>
+        <Media />
+        {isMobileScreenSize && <Categories />}
+        <Collections />
+        <Gender />
+        {!isMobileScreenSize && <Categories />}
+        <Products />
+        <Custom />
+      </main>
     </div>
   );
 }

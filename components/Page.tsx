@@ -10,13 +10,6 @@ function Page({ blok }: any) {
       {blok.body.map((nestedBlok: any) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
-      {/* <SliderMonoBlock />
-        {isMobileScreenSize && <Categories />}
-        <Collections />
-        <Gender />
-        {!isMobileScreenSize && <Categories />}
-        <Products />
-        <Custom /> */}
     </main>
   );
 }

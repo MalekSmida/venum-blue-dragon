@@ -3,15 +3,15 @@ import { useSelector } from 'react-redux';
 import cx from 'classnames';
 
 // local files
-import { selectApp } from '../redux/slices/appSlice';
-import { Video, Button, Title, CardImageMedia } from '../reusable';
-import { Slider } from '../layout';
+import { selectApp } from '../../redux/slices/appSlice';
+import { Video, Button, Title, CardImageMedia } from '../../reusable';
+import { Slider } from '../../layout';
 import { dataMedia } from './mocks';
 
 /**
  * Media block component
  */
-function SliderMonoBlock() {
+function Media() {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
@@ -48,4 +48,4 @@ function SliderMonoBlock() {
   );
 }
 
-export default SliderMonoBlock;
+export default Media;
