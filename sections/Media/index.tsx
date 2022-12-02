@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 // local files
 import { selectApp } from '../../redux/slices/appSlice';
-import { Video, Button, Title, CardMedia } from '../../components';
+import { Video, Button, Title, CardMedia } from '../../reusable';
 import { Slider } from '../../layout';
 import { dataMedia } from './mocks';
 

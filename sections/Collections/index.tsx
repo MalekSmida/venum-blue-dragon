@@ -1,5 +1,5 @@
 // local files
-import { CardPictureTitle } from '../../components';
+import { CardPictureTitle } from '../../reusable';
 import { Section, Slider } from '../../layout';
 import { dataCollection } from './mocks';
 

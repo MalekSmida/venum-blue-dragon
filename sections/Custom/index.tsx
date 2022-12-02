@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 // local files
 import { Section, Slider } from '../../layout';
-import { CardPictureTitleButtons, MenuNav } from '../../components';
+import { CardPictureTitleButtons, MenuNav } from '../../reusable';
 import { dataCustom, dataMenuCostum } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
 
