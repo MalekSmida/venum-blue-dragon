@@ -52,7 +52,7 @@ const CardImageMedia: React.FC<PropsCardImageMedia> = ({
           }
         )}
       >
-        <Title className="pb-5 pl-3 md:pb-11">{blok.buttonTitle}</Title>
+        <Title className="pb-5 pl-3 md:pb-11">{blok.title}</Title>
         <Button title="Découvrir" link={blok.buttonlink} />
       </div>
     </div>

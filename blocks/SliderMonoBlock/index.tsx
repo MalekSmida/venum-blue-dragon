@@ -20,8 +20,6 @@ const SliderMonoBlock: React.FC<{ blok: SliderMonoBlockStoryblok }> = ({
   const { videoDesk, videoMobile, title, buttonTitle, buttonLink } =
     blok.video[0];
 
-  console.log(blok.images);
-
   return (
     <div className="relative" {...storyblokEditable(blok)}>
       <Slider hidePagination insideNavigation>
