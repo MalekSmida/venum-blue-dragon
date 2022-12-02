@@ -25,6 +25,7 @@ html {
 }
 
 .swiper-pagination-bullet {
+  height: 6px !important;
   width: 40px !important;
   border-radius: 25px !important;
   cursor: pointer;
