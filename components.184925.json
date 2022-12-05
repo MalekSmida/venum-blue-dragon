@@ -299,6 +299,41 @@
       "component_group_name": "blocks"
     },
     {
+      "name": "StaticThreeBlocks",
+      "display_name": "Static Three Blocks",
+      "created_at": "2022-12-05T09:24:13.770Z",
+      "updated_at": "2022-12-05T09:28:21.566Z",
+      "id": 3193929,
+      "schema": {
+        "title": {
+          "type": "text",
+          "required": true,
+          "max_length": "45"
+        },
+        "blockList": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "CardImageTitle"
+          ],
+          "maximum": "3",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Static Three Blocks",
+      "component_group_uuid": "978ae24e-a13a-41b9-8944-dce3b3c92be9",
+      "color": null,
+      "icon": null,
+      "component_group_name": "blocks"
+    },
+    {
       "name": "StaticTwoBlocks",
       "display_name": "Static Two Blocks",
       "created_at": "2022-12-02T17:03:05.268Z",

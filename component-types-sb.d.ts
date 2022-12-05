@@ -78,7 +78,12 @@ export interface CardImageTitleStoryblok {
 }
 
 export interface PageStoryblok {
-  body?: (SliderFourBlocksStoryblok | SliderMonoBlockStoryblok | StaticTwoBlocksStoryblok)[];
+  body?: (
+    | SliderFourBlocksStoryblok
+    | SliderMonoBlockStoryblok
+    | StaticThreeBlocksStoryblok
+    | StaticTwoBlocksStoryblok
+  )[];
   _uid: string;
   component: "Page";
   [k: string]: any;
@@ -97,6 +102,14 @@ export interface SliderMonoBlockStoryblok {
   images?: CardImageMediaStoryblok[];
   _uid: string;
   component: "SliderMonoBlock";
+  [k: string]: any;
+}
+
+export interface StaticThreeBlocksStoryblok {
+  title: string;
+  blockList: CardImageTitleStoryblok[];
+  _uid: string;
+  component: "StaticThreeBlocks";
   [k: string]: any;
 }
 

@@ -1,19 +1,22 @@
 // node module
 import { useSelector } from 'react-redux';
 import cx from 'classnames';
+import { storyblokEditable } from '@storyblok/react';
 
 // local files
 import { CardImageTitle } from '../../components';
 import { Section, Slider } from '../../layout';
-import { dataProducts } from './mocks';
 import { selectApp } from '../../redux/slices/appSlice';
+import { StaticThreeBlocksStoryblok } from '../../component-types-sb';
 
-function Products() {
+const StaticThreeBlocks: React.FC<{
+  blok: StaticThreeBlocksStoryblok;
+}> = ({ blok }) => {
   // redux
   const { isMobileScreenSize } = useSelector(selectApp);
 
   return (
-    <Section title="Des produits adaptés à vos besoins">
+    <Section title={blok.title} {...storyblokEditable(blok)}>
       <div className={cx('w-full', { 'flex flex-row': !isMobileScreenSize })}>
         {isMobileScreenSize ? (
           <Slider
@@ -24,10 +27,10 @@ function Products() {
               },
             }}
           >
-            {dataProducts.map((gender) => (
+            {blok.blockList.map((card) => (
               <CardImageTitle
-                key={gender._id}
-                collection={gender}
+                key={card._uid}
+                blok={card}
                 width="w-full"
                 height="h-c-750"
                 withPagination
@@ -35,10 +38,10 @@ function Products() {
             ))}
           </Slider>
         ) : (
-          dataProducts.map((product) => (
+          blok.blockList.map((card) => (
             <CardImageTitle
-              key={product._id}
-              collection={product}
+              key={card._uid}
+              blok={card}
               width="w-full sm:w-1/3"
               height="h-c-750"
             />
@@ -47,6 +50,6 @@ function Products() {
       </div>
     </Section>
   );
-}
+};
 
-export default Products;
+export default StaticThreeBlocks;
