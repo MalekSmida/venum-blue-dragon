@@ -4,7 +4,9 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['cdn.shopify.com', 'a.storyblok.com', 'res.cloudinary.com'],
+    unoptimized: true,
   },
+  assetPrefix: './',
 };
 
 module.exports = nextConfig;
